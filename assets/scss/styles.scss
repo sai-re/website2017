@@ -1,0 +1,11 @@
+$background-color: #f4f4f4;
+
+body {
+    background-color: $background-color;
+}
+
+body div {
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+}
