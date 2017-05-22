@@ -1,11 +1,23 @@
-$background-color: #f4f4f4;
-
-body {
-    background-color: $background-color;
+//RESETS
+* {    
+  margin: 0;    
+  padding: 0;  
 }
 
-body div {
-    height: 100px;
-    width: 100px;
-    background-color: brown;
+html {    
+    box-sizing: border-box;  
+}  
+
+*, *:before, *:after {    
+    box-sizing: inherit;  
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "raleway";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga" on;
 }

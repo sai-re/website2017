@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    pug = require('gulp-pug'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     pump =  require('pump');
@@ -30,21 +29,11 @@ gulp.task('compress', function (cb) {
   );
 });
 
-//CONVERT PUG
-gulp.task('templates', function buildHTML() {
-  return gulp.src('assets/templates/*.pug')
-    .pipe(pug({
-    // Your options in here. 
-    }))
-    .pipe(gulp.dest('dist/'));
-});
-
 //WATCHING
 gulp.task('watch',function() {
     gulp.watch('assets/scss/*.scss',['styles']);
-    gulp.watch('assets/templates/*.pug', ['templates']);
     gulp.watch('assets/css/*.css', ['minify']);
     gulp.watch('assets/js/*.js', ['compress']);
 });
 
-gulp.task('default', ['watch', 'minify', 'compress', 'templates']);
+gulp.task('default', ['watch', 'minify', 'compress']);
