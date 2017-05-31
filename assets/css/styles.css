@@ -1,7 +1,35 @@
-body {
-  background-color: #f4f4f4; }
+* {
+  margin: 0;
+  padding: 0; }
 
-body div {
-  height: 100px;
-  width: 100px;
-  background-color: brown; }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "raleway";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+  background-color: #F6F6F6; }
+
+html,
+body {
+  height: 100%; }
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+.header__bg {
+  width: 100%;
+  height: 100%;
+  background-color: #C18D8D;
+  transform: skewY(-10deg);
+  transform-origin: 0; }
