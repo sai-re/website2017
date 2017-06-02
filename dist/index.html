@@ -12,6 +12,15 @@
 <body>
     <header class="header">
         <div class="header__container">
+
+            <div class="header__hamburger">
+                <button class="hamburger hamburger--spin" type="button" id="hamburger">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                </button>
+            </div>
+
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__link" href="">bio</a></li>
@@ -20,6 +29,10 @@
                     <li class="nav__item"><a class="nav__link" href="">contact</a></li>
                 </ul>
             </nav>
+
+            <div class="logo">
+                <img src="images/logo2.svg" alt="" class="logo__img">
+            </div>
         </div>
     </header>
 
@@ -31,6 +44,23 @@
     <footer>
         
     </footer>
+
+
+    <script>
+        var hamburger = document.querySelector(".hamburger"),
+            nav = document.querySelector(".nav");
+        
+        hamburger.addEventListener("click", function() {
+            hamburger.classList.toggle("is-active");
+            if (nav.style.width == 0 || nav.style.width == "0px") {
+                nav.style.width = "15.63rem";
+                document.getElementsByTagName("main")[0].style.marginLeft = "15.63rem";
+            } else {
+                nav.style.width = "0px";
+                document.getElementsByTagName("main")[0].style.marginLeft = "0px";
+            }
+        })
+    </script>
 
     <script src="js/script.js"></script>
 </body>
