@@ -31,21 +31,33 @@
             </nav>
 
             <div class="main">
-                <img src="images/logo2.svg" alt="Siavoush Redhai | Logo" class="main__img">
+                <img src="images/logo2.svg" alt="SR | Logo" class="main__img">
                 <h1 class="main__title">Siavoush Redhai</h1>
                 <h2 class="main__secondaryTitle">web developer</h2>
             </div>
 
             <div class="scroll">
                 <p class="scroll__text">who i am and what i can do</p>
-                <img src="images/arrow.svg" alt="Arrow Down" class="scroll__arrow">
+                <a href=""><img src="images/arrow.svg" alt="Arrow Down" class="scroll__arrow"></a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section></section>
-        <section></section>
+    <main class="primary">
+
+        <section class="bio">
+            <img class="bio__portrait" src="images/portraits.png" alt="Siavoush Redhai" c>
+            <h3 class="bio__title">bio</h3>
+            <p class="bio__text">I am a Web Developer with focus on front-end technologies, I Studied Computer Games Development at the University of Westminster, and have graduated with Honours. I have worked in a variety of roles allowing me to sharpen key skills that are necessary for a successful career.</p>
+            <p class="bio__text">A recent hobby of mine has been experimenting with photography using the popular social network app, Instagram. You can find my gallery below showcasing some of my latest pictures.</p>
+            <div class="button">
+                <a href="" class="button__text">download cv</a>
+            </div>
+        </section>
+
+        <section>
+
+        </section>
     </main>
 
     <footer>
@@ -61,10 +73,8 @@
             hamburger.classList.toggle("is-active");
             if (nav.style.width == 0 || nav.style.width == "0px") {
                 nav.style.width = "15.63rem";
-                // document.getElementsByTagName("body")[0].style.marginLeft = "15.63rem";
             } else {
                 nav.style.width = "0px";
-                // document.getElementsByTagName("body")[0].style.marginLeft = "0px";
             }
         })
     </script>
