@@ -13,7 +13,7 @@
     <header class="header">
         <div class="header__container">
 
-            <div class="header__hamburger">
+            <div class="mb-menu">
                 <button class="hamburger hamburger--spin" type="button" id="hamburger">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -30,8 +30,15 @@
                 </ul>
             </nav>
 
-            <div class="logo">
-                <img src="images/logo2.svg" alt="" class="logo__img">
+            <div class="main">
+                <img src="images/logo2.svg" alt="Siavoush Redhai | Logo" class="main__img">
+                <h1 class="main__title">Siavoush Redhai</h1>
+                <h2 class="main__secondaryTitle">web developer</h2>
+            </div>
+
+            <div class="scroll">
+                <p class="scroll__text">who i am and what i can do</p>
+                <img src="images/arrow.svg" alt="Arrow Down" class="scroll__arrow">
             </div>
         </div>
     </header>
@@ -54,10 +61,10 @@
             hamburger.classList.toggle("is-active");
             if (nav.style.width == 0 || nav.style.width == "0px") {
                 nav.style.width = "15.63rem";
-                document.getElementsByTagName("main")[0].style.marginLeft = "15.63rem";
+                // document.getElementsByTagName("body")[0].style.marginLeft = "15.63rem";
             } else {
                 nav.style.width = "0px";
-                document.getElementsByTagName("main")[0].style.marginLeft = "0px";
+                // document.getElementsByTagName("body")[0].style.marginLeft = "0px";
             }
         })
     </script>
