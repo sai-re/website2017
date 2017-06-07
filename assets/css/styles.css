@@ -90,7 +90,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  color: #888888; }
 
 html,
 body {
@@ -99,70 +100,70 @@ body {
 @media screen and (min-width: 20rem) {
   .header {
     width: 100%;
-    height: 100%;
-    background-color: #C18D8D; }
+    height: 100vh;
+    background-color: #C18D8D;
+    transform: skewY(-10deg);
+    color: #f6f6f6;
+    font-weight: 300; }
     .header .header__container {
-      display: flex;
-      height: 100%;
-      flex-direction: column;
       width: 80%;
       max-width: 71.25rem;
-      margin: auto; }
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      transform: skewY(10deg); }
   .mb-menu {
     display: flex;
     justify-content: flex-end;
-    padding-top: 3.75rem; }
+    margin-top: 3.75rem; }
   body {
     transition: margin-left .5s; }
   .nav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
-    background-color: #f6f6f6;
+    z-index: 1;
     overflow-x: hidden;
-    transition: 0.5s;
-    font-size: 1.5em; }
+    background-color: #f6f6f6;
+    font-size: 1.5em;
+    transition: 0.5s; }
     .nav .nav__list {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-top: 3.75rem; }
     .nav .nav__item {
-      list-style-type: none;
-      padding-bottom: 2.813rem; }
+      padding-bottom: 2.813rem;
+      list-style-type: none; }
     .nav .nav__link {
       color: #888888;
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 300; }
+      letter-spacing: 1px; }
   .main {
-    font-size: 2rem;
-    color: #f6f6f6;
+    margin: auto;
     text-align: center;
-    margin: auto; }
+    font-size: 2rem; }
     .main .main__img {
       width: 10.69rem; }
     .main .main__title,
     .main .main__secondaryTitle {
       font-weight: 300; }
     .main .main__title {
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 1em;
       line-height: 1.25em;
-      font-size: 1em; }
+      letter-spacing: 1px;
+      text-transform: uppercase; }
     .main .main__secondaryTitle {
       font-size: 0.75em; }
   .scroll {
-    color: #f6f6f6;
-    text-align: center;
-    font-weight: 300;
-    margin: auto; }
+    margin: auto;
+    text-align: center; }
     .scroll .scroll__arrow {
-      padding: 1.563rem 0;
+      padding: 1.875rem;
       animation: upDown 2s infinite; }
   @keyframes upDown {
     0% {
@@ -171,12 +172,9 @@ body {
       transform: translateY(10px); }
     100% {
       transform: translateY(0); } }
-  .primary {
-    height: 100%; }
   .bio {
-    padding: 3.75rem 0;
     display: flex;
-    height: 100%; }
+    padding: 3.75rem 0; }
     .bio .bio__container {
       width: 80%;
       max-width: 71.25rem;
@@ -191,19 +189,19 @@ body {
       font-size: 1.5rem;
       margin-top: 0.9375rem; }
     .bio .bio__text {
-      color: #888;
-      width: 50%;
+      width: 55%;
       margin-top: 0.9375rem; }
   .button {
     margin-top: 3.75rem; }
     .button .button__text {
-      text-decoration: none;
+      display: block;
       padding: 0.9375rem 1.875rem;
+      text-decoration: none;
       background-color: #C18D8D;
       color: #f6f6f6; }
   .tech {
-    padding: 3.75rem 0;
     display: flex;
+    padding: 3.75rem 0;
     background-color: #ffffff; }
     .tech .tech__container {
       width: 80%;
@@ -216,10 +214,85 @@ body {
       text-transform: uppercase;
       font-weight: 300;
       color: #666;
-      font-size: 1.5rem;
-      margin-top: 0.9375rem; }
-    .tech .primary__item {
-      list-style-type: none; } }
+      font-size: 1.5rem; }
+    .tech .tech__primary {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 31.8%;
+      margin-top: 1.875rem; }
+      .tech .tech__primary .primary__item {
+        padding: 2.813rem;
+        border: 1px solid #888888;
+        list-style-type: none; }
+      .tech .tech__primary li:nth-child(1) {
+        border-top: none;
+        border-left: none; }
+      .tech .tech__primary li:nth-child(2) {
+        border-top: none;
+        border-right: none; }
+      .tech .tech__primary li:nth-child(3) {
+        border-left: none; }
+      .tech .tech__primary li:nth-child(4) {
+        border-right: none; }
+      .tech .tech__primary li:nth-child(5) {
+        border-bottom: none;
+        border-left: none; }
+      .tech .tech__primary li:nth-child(6) {
+        border-bottom: none;
+        border-right: none; }
+      .tech .tech__primary .primary__img {
+        float: left; }
+    .tech .tech__secondary {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; }
+      .tech .tech__secondary .secondary__item {
+        padding: 1.875rem;
+        list-style-type: none; }
+      .tech .tech__secondary .secondary__img {
+        float: left; }
+  .contact {
+    display: flex;
+    padding: 3.75rem 0; }
+    .contact .contact__container {
+      width: 80%;
+      max-width: 71.25rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .contact .contact__title {
+      text-transform: uppercase;
+      font-weight: 300;
+      color: #666;
+      font-size: 1.5rem; }
+    .contact .icons {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row; }
+      .contact .icons .icons__item {
+        padding: 1.875rem;
+        list-style-type: none; }
+      .contact .icons .icons__img {
+        float: left; }
+    .contact .contact__link {
+      margin-top: 1.875rem;
+      color: #666;
+      text-decoration: none; }
+  .footer {
+    display: flex;
+    padding: 3.75rem 0;
+    background-color: #ffffff; }
+    .footer .footer__container {
+      width: 80%;
+      max-width: 71.25rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .footer .msg__highlight {
+      color: #666; } }
 
 @media screen and (min-width: 75rem) {
   .mb-menu {
