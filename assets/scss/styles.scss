@@ -8,7 +8,7 @@ $bp-900: 56.25rem;
 $bp-1200: 75rem;
 
 $white: #f6f6f6;
-$primary: #C18D8D;
+$primary: #3C7A89;
 $text: #888888;
 $secondary: #3C7A89;
 
@@ -142,7 +142,7 @@ body {
         font-size: 2rem;
 
         .main__img {
-            width: 10.69rem;
+            width: 6rem;
         }
 
         .main__title,
@@ -212,6 +212,7 @@ body {
             letter-spacing: 1px;
             background-color: $secondary;
             color: $white;
+            font-weight: 300;
         }
     }
 
@@ -245,8 +246,21 @@ body {
                 list-style-type: none;
             }
 
-            .primary__img {
-                float: left;
+            .primary__box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5.625rem;
+                height: 5.625rem;
+                background-color: $primary;
+            }
+
+            .primary__text {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 1.125rem;
+                font-weight: 300;
+                letter-spacing: 1px;
             }
         }
 
@@ -260,8 +274,20 @@ body {
                 padding: 0.65rem;
             }
 
-            .secondary__img {
-                float: left;
+            .secondary__box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3.75rem;
+                height: 3.75rem;
+                background-color: $primary;
+            }
+
+            .secondary__text {
+                color: $white;
+                font-size: 0.875rem;
+                font-weight: 300;
+                text-align: center;
             }
         }
     }
@@ -320,6 +346,10 @@ body {
         .main__title {
             font-size: 1.5em;
         }
+
+        .main__img {
+            width: 8rem;
+        }
     }
 
     .button {
@@ -352,6 +382,10 @@ body {
         .main__secondaryTitle {
             font-size: 1em;
         }
+
+        .main__img {
+            width: 10.69rem;
+        }
     }
 
     .bio {
@@ -370,7 +404,7 @@ body {
             .primary__item {
                 margin: 0;
                 padding: 2.813rem;
-                border: 1px solid $text;
+                border: 1px solid #CCCCCC;
             }
 
             li:nth-child(1) {

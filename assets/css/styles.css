@@ -116,7 +116,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #C18D8D;
+    background-color: #3C7A89;
     transform: skewY(-20deg);
     content: ''; }
   .mb-menu {
@@ -154,7 +154,7 @@ body {
     text-align: center;
     font-size: 2rem; }
     .main .main__img {
-      width: 10.69rem; }
+      width: 6rem; }
     .main .main__title,
     .main .main__secondaryTitle {
       font-weight: 300; }
@@ -209,7 +209,8 @@ body {
       text-decoration: none;
       letter-spacing: 1px;
       background-color: #3C7A89;
-      color: #f6f6f6; }
+      color: #f6f6f6;
+      font-weight: 300; }
   div:last-child {
     margin-top: 0.9375rem; }
   .tech {
@@ -239,8 +240,19 @@ body {
         margin: auto;
         padding: 1.18rem;
         list-style-type: none; }
-      .tech .tech__primary .primary__img {
-        float: left; }
+      .tech .tech__primary .primary__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5.625rem;
+        height: 5.625rem;
+        background-color: #3C7A89; }
+      .tech .tech__primary .primary__text {
+        color: #f6f6f6;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-weight: 300;
+        letter-spacing: 1px; }
     .tech .tech__secondary {
       display: flex;
       flex-wrap: wrap;
@@ -250,8 +262,18 @@ body {
         margin: auto;
         list-style-type: none;
         padding: 0.65rem; }
-      .tech .tech__secondary .secondary__img {
-        float: left; }
+      .tech .tech__secondary .secondary__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.75rem;
+        height: 3.75rem;
+        background-color: #3C7A89; }
+      .tech .tech__secondary .secondary__text {
+        color: #f6f6f6;
+        font-size: 0.875rem;
+        font-weight: 300;
+        text-align: center; }
   .contact {
     display: flex;
     padding: 3.75rem 0; }
@@ -299,6 +321,8 @@ body {
 @media screen and (min-width: 37.5rem) {
   .main .main__title {
     font-size: 1.5em; }
+  .main .main__img {
+    width: 8rem; }
   .button {
     width: 50%; }
   .tech .tech__primary {
@@ -311,6 +335,8 @@ body {
     font-size: 2em; }
   .main .main__secondaryTitle {
     font-size: 1em; }
+  .main .main__img {
+    width: 10.69rem; }
   .bio .bio__text {
     width: 80%; }
   .button {
@@ -320,7 +346,7 @@ body {
     .tech .tech__primary .primary__item {
       margin: 0;
       padding: 2.813rem;
-      border: 1px solid #888888; }
+      border: 1px solid #CCCCCC; }
     .tech .tech__primary li:nth-child(1) {
       border-top: none;
       border-left: none; }
