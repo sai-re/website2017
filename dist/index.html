@@ -64,20 +64,20 @@
             <div class="tech__container">
                 <h3 class="tech__title">tech</h3>
                     <ul class="tech__primary">
-                        <li class="primary__item" ><div class="primary__box"><p class="primary__text">html</p></div></li>
-                        <li class="primary__item" ><div class="primary__box"><p class="primary__text">js</p></div></li>
-                        <li class="primary__item" ><div class="primary__box"><p class="primary__text">php</p></div></li>
-                        <li class="primary__item" ><div class="primary__box"><p class="primary__text">css 3</p></div></li>
-                        <li class="primary__item" ><div class="primary__box"><p class="primary__text">sql</p></div></li>
-                        <li class="primary__item" ><div class="primary__box"><p class="primary__text">wp</p></div></li>
+                        <li class="primary__item" ><div class="primary__box box"><p class="primary__text">html</p></div></li>
+                        <li class="primary__item" ><div class="primary__box box"><p class="primary__text">js</p></div></li>
+                        <li class="primary__item" ><div class="primary__box box"><p class="primary__text">php</p></div></li>
+                        <li class="primary__item" ><div class="primary__box box"><p class="primary__text">css 3</p></div></li>
+                        <li class="primary__item" ><div class="primary__box box"><p class="primary__text">sql</p></div></li>
+                        <li class="primary__item" ><div class="primary__box box"><p class="primary__text">wp</p></div></li>
                     </ul>
                     <ul class="tech__secondary">
-                        <li class="secondary__item"><div class="secondary__box"><p class="secondary__text">jQuery</p></div></li>
-                        <li class="secondary__item"><div class="secondary__box"><p class="secondary__text">Git</p></div></li>
-                        <li class="secondary__item"><div class="secondary__box"><p class="secondary__text">Sass</p></div></li>
-                        <li class="secondary__item"><div class="secondary__box"><p class="secondary__text">PS</p></div></li>
-                        <li class="secondary__item"><div class="secondary__box"><p class="secondary__text">AI</p></div></li>
-                        <li class="secondary__item"><div class="secondary__box"><p class="secondary__text">ZURB <br> fdn</p></div></li>
+                        <li class="secondary__item"><div class="secondary__box box"><p class="secondary__text">jQuery</p></div></li>
+                        <li class="secondary__item"><div class="secondary__box box"><p class="secondary__text">Git</p></div></li>
+                        <li class="secondary__item"><div class="secondary__box box"><p class="secondary__text">Sass</p></div></li>
+                        <li class="secondary__item"><div class="secondary__box box"><p class="secondary__text">PS</p></div></li>
+                        <li class="secondary__item"><div class="secondary__box box"><p class="secondary__text">AI</p></div></li>
+                        <li class="secondary__item"><div class="secondary__box box"><p class="secondary__text">ZURB <br> fdn</p></div></li>
                     </ul>    
             </div>
         </section>
@@ -87,13 +87,13 @@
                 <h3 class="contact__title">contact</h3>
                 <ul class="icons">
                     <li class="icons__item">
-                        <a href=""><img class="icons__img" src="images/github.svg" alt=""></a>
+                        <a href=""><object class="icons__svg" data="images/github.svg" type="image/svg+xml"></object></a>
                     </li>
                     <li class="icons__item">
-                        <a href=""><img class="icons__img" src="images/mail.svg" alt=""></a>
+                        <a href=""><object class="icons__svg" data="images/mail.svg" type="image/svg+xml"></object></a>
                     </li>
                     <li class="icons__item">
-                        <a href=""><img class="icons__img" src="images/linkedin.svg" alt=""></a>
+                        <a href=""><object class="icons__svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
                     </li>
                 </ul>
                 <p class="contact__msg">Feel free to get in touch</p>
@@ -107,21 +107,7 @@
             <p class="footer__msg">2017 Designed and developed by <span class="msg__highlight">Siavoush Redhai</span></p>
         </div>
     </footer>
-
-    <script>
-        var hamburger = document.querySelector(".hamburger"),
-            nav = document.querySelector(".nav");
-        
-        hamburger.addEventListener("click", function() {
-            hamburger.classList.toggle("is-active");
-            if (nav.style.width == 0 || nav.style.width == "0px") {
-                nav.style.width = "15.63rem";
-            } else {
-                nav.style.width = "0px";
-            }
-        })
-    </script>
-
+    
     <script src="js/script.js"></script>
 </body>
 </html>
