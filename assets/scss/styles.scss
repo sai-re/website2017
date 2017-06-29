@@ -45,10 +45,16 @@ $px-60: 3.75rem;
 }
 
 @mixin section() {
-    display: flex;
+    // display: flex;
     padding: $px-60 0;
 }
 
+//ANIMATION
+@keyframes upDown {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(10px) }
+    100% { transform: translateY(0) }
+}
 
 //BEGIN
 body {
@@ -66,6 +72,10 @@ body {
 html,
 body {
     height: 100%;
+}
+
+body {
+
 }
 
 //GENERAL RESPONSIVE
@@ -94,7 +104,7 @@ body {
         transform: skewY(-20deg);
         content: '';
         background-color: $primary;
-        transition: background-color .5s;
+        transition: background-color .3s;
     }
 
     .mb-menu {
@@ -174,12 +184,6 @@ body {
         }
     }
 
-    @keyframes upDown {
-        0% {transform: translateY(0)}
-        50% {transform: translateY(10px)}
-        100% {transform: translateY(0)}
-    }
-
     .bio {
         @include section();
         // height: 100vh;
@@ -214,7 +218,12 @@ body {
             background-color: $primary;
             color: $white;
             font-weight: 300;
-            transition: background-color .5s;
+            transition: background-color .3s;
+
+            &:hover {
+                opacity: 0.8;
+                transition: opacity .5s;
+            }
         }
     }
 
@@ -255,7 +264,7 @@ body {
                 width: 5.625rem;
                 height: 5.625rem;
                 background-color: $primary;
-                transition: background-color .5s;
+                transition: background-color .3s;
             }
 
             .primary__text {
@@ -284,7 +293,7 @@ body {
                 width: 3.75rem;
                 height: 3.75rem;
                 background-color: $primary;
-                transition: background-color .5s;
+                transition: background-color .3s;
             }
 
             .secondary__text {
@@ -316,13 +325,18 @@ body {
                 list-style-type: none;
             }
 
-            .icons__img {
-                float: left;
+            .icons__link {
+                display: block;
+            }
+
+            .icons__svg {
+                pointer-events: none;
             }
         }
 
         .contact__link {
             margin-top: $px-30;
+            display: block;
             color: #666; 
             text-decoration: none;
         }
@@ -454,13 +468,13 @@ body {
     
     .nav {
         margin-top: $px-60;
-        height: initial;
-        width: initial;
-        position: initial;
-        top: initial;
-        left: initial;
-        background-color: initial;
-        overflow-x: initial;
+        height: auto;
+        width: auto;
+        position: static;
+        top: auto;
+        left: auto;
+        background-color: transparent;
+        overflow-x: auto;
         transition: none;
         font-size: 0.875rem;
 

@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     function displaycolours() {
 
         var colourlist = [
-            { colour: '#C18D8D' }, 
+            { colour: '#F27935' }, 
             { colour: '#1E8BC3' }, 
-            { colour: '#C0392B' }, 
+            { colour: '#EC644B' }, 
             { colour: '#4DAF7C' },
             { colour: '#336E7B' }
         ];
@@ -73,6 +73,92 @@ document.addEventListener("DOMContentLoaded", function (event) {
             loopItem(buttons);
         }
     }
+
+    function smoothScroll(eID) {
+
+        var currentYPosition = function() {
+            
+            var yScroll;
+            // Firefox, Chrome, Opera, Safari
+            if (window.pageYOffset) {
+                yScroll = window.pageYOffset;
+            // Internet Explorer 6 - standards mode
+            } else if (document.documentElement && document.documentElement.scrollTop) {
+                yScroll = document.documentElement.scrollTop;
+            // Internet Explorer 6, 7 and 8
+            } else if (document.body) {
+                yScroll = document.body.scrollTop;
+            }
+            
+            return yScroll;
+        }
+
+        var elmYPosition = function(eID) {
+            var elm = document.getElementById(eID);
+            var y = elm.offsetTop;
+            var node = elm;
+            while (node.offsetParent && node.offsetParent != document.body) {
+                node = node.offsetParent;
+                y += node.offsetTop;
+            } 
+            
+            return y;
+        }
+
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID);
+        
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+
+        var speed = Math.round(distance / 50);
+
+        if (speed >= 20) {
+            speed = 20;
+        }
+
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+
+        if (stopY > startY) {
+            var i = startY;
+            
+            for (i; i < stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, " + leapY + ")" , timer * speed);
+                leapY += step; 
+                
+                if (leapY > stopY) leapY = stopY; timer++;
+            };
+        }
+
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; 
+            
+            if (leapY < stopY) leapY = stopY; timer++;
+        }
+    }
+
+    var navLinks = document.querySelectorAll('.nav__link'),
+        backToTop = document.querySelector('.contact__link');
+
+    function scrollTo(link, target) {
+        link.addEventListener('click', function() {
+            smoothScroll(target);
+
+            event.preventDefault();
+        });
+    }
+
+    scrollTo(navLinks[0], 'bio');
+    scrollTo(navLinks[1], 'tech');
+    scrollTo(navLinks[3], 'contact');
+    scrollTo(backToTop, 'header');
+
 
     displaycolours();
 });

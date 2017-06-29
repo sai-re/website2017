@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__container">
 
             <div class="mb-menu">
@@ -23,10 +23,10 @@
 
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="">bio</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">tech</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">gallery</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">contact</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">bio</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">tech</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">gallery</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
                 </ul>
             </nav>
 
@@ -38,14 +38,14 @@
 
             <div class="scroll">
                 <p class="scroll__text">who i am and what i can do</p>
-                <a href=""><img src="images/arrow.svg" alt="Arrow Down" class="scroll__arrow"></a>
+                <img src="images/arrow.svg" alt="Arrow Down" class="scroll__arrow">
             </div>
         </div>
     </header>
 
     <main>
 
-        <section class="bio">
+        <section class="bio" id="bio">
             <div class="bio__container">
                 <img class="bio__portrait" src="images/portraits.png" alt="Siavoush Redhai" c>
                 <h3 class="bio__title">bio</h3>
@@ -61,7 +61,7 @@
         </section>
 
         <section class="tech">
-            <div class="tech__container">
+            <div class="tech__container" id="tech">
                 <h3 class="tech__title">tech</h3>
                     <ul class="tech__primary">
                         <li class="primary__item" ><div class="primary__box box"><p class="primary__text">html</p></div></li>
@@ -82,22 +82,22 @@
             </div>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact__container">
                 <h3 class="contact__title">contact</h3>
                 <ul class="icons">
                     <li class="icons__item">
-                        <a href=""><object class="icons__svg" data="images/github.svg" type="image/svg+xml"></object></a>
+                        <a href="#" class="icons__link"><object class="icons__svg" data="images/github.svg" type="image/svg+xml"></object></a>
                     </li>
                     <li class="icons__item">
-                        <a href=""><object class="icons__svg" data="images/mail.svg" type="image/svg+xml"></object></a>
+                        <a href="#" class="icons__link"><object class="icons__svg" data="images/mail.svg" type="image/svg+xml"></object></a>
                     </li>
                     <li class="icons__item">
-                        <a href=""><object class="icons__svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
+                        <a href="#" class="icons__link"><object class="icons__svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
                     </li>
                 </ul>
                 <p class="contact__msg">Feel free to get in touch</p>
-                <a class="contact__link" href="">back to top</a>
+                <a class="contact__link" href="#">back to top</a>
             </div>
         </section>
     </main>
@@ -108,6 +108,11 @@
         </div>
     </footer>
     
+
+    <script>
+        
+    </script>
+
     <script src="js/script.js"></script>
 </body>
 </html>
