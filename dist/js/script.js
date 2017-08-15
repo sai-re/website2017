@@ -2,21 +2,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     var hamburger = document.querySelector(".hamburger"),
         nav = document.querySelector(".nav"),
-        icons = document.querySelectorAll(".icons__svg");
+        navLinks = document.querySelectorAll('.nav__link'),
+        backToTop = document.querySelector('.contact__link');
     
     hamburger.addEventListener("click", function() {
-        if (nav.style.width == 0 || nav.style.width == "0px") {
-            if (window.screen.width <= 360) {
-                nav.style.width = "11.63rem";
-            } else {
-                nav.style.width = "15.63rem";
-            }
+        if (!nav.style.display || nav.style.display == "none") {
+            hamburger.classList.add("is-active");
+            nav.style.display = "block";
+
         } else {
-            nav.style.width = "0px";
+            hamburger.classList.remove("is-active");
+            nav.style.display = "none";
         }
     });
 
     function displaycolours() {
+        var icons = document.querySelectorAll(".icons__svg"),
+            instagram = document.querySelectorAll(".instagram");;
 
         var colourlist = [
             { colour: '#F27935' }, 
@@ -66,8 +68,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         window.onload = function() {
             changeSvgColour(icons, colourlist[randomNumber].colour);
-            
+            changeSvgColour(instagram, colourlist[randomNumber].colour);
+
             insertCss('.header::before', 'background', colourlist[randomNumber].colour);
+            insertCss('.gallery-header', 'background', colourlist[randomNumber].colour);
 
             loopItem(tech);
             loopItem(buttons);
@@ -94,9 +98,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
 
         var elmYPosition = function(eID) {
-            var elm = document.getElementById(eID);
-            var y = elm.offsetTop;
-            var node = elm;
+            var elm = document.getElementById(eID),
+                y = elm.offsetTop,
+                node = elm;
+
             while (node.offsetParent && node.offsetParent != document.body) {
                 node = node.offsetParent;
                 y += node.offsetTop;
@@ -105,10 +110,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             return y;
         }
 
-        var startY = currentYPosition();
-        var stopY = elmYPosition(eID);
-        
-        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        var startY = currentYPosition(),
+            stopY = elmYPosition(eID),
+            distance = stopY > startY ? stopY - startY : startY - stopY;
         
         if (distance < 100) {
             scrollTo(0, stopY); return;
@@ -120,9 +124,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
             speed = 20;
         }
 
-        var step = Math.round(distance / 25);
-        var leapY = stopY > startY ? startY + step : startY - step;
-        var timer = 0;
+        var step = Math.round(distance / 25),
+            leapY = stopY > startY ? startY + step : startY - step,
+            timer = 0;
 
         if (stopY > startY) {
             var i = startY;
@@ -143,22 +147,25 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    var navLinks = document.querySelectorAll('.nav__link'),
-        backToTop = document.querySelector('.contact__link');
-
     function scrollTo(link, target) {
         link.addEventListener('click', function() {
             smoothScroll(target);
+            
+            if(window.screen.width < 1200) {
+                nav.style.display = "none";
+                hamburger.classList.remove("is-active");                
+            }
 
             event.preventDefault();
+            event.stopPropagation();
         });
     }
 
-    scrollTo(navLinks[0], 'bio');
-    scrollTo(navLinks[1], 'tech');
-    scrollTo(navLinks[3], 'contact');
+    scrollTo(navLinks[1], 'bio');
+    scrollTo(navLinks[2], 'tech');
+    scrollTo(navLinks[4], 'contact');
     scrollTo(backToTop, 'header');
-
+    scrollTo(backToTop, 'gallery-header');
 
     displaycolours();
 });
