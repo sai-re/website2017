@@ -53,7 +53,7 @@ gulp.task('compress', function (cb) {
 gulp.task('serve', ['sass'], function() {
     
         browserSync.init({
-            server: "./dis"
+            server: "./dist"
         });
     
         gulp.watch('assets/scss/*.scss', ['sass'])
