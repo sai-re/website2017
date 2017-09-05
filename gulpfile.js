@@ -3,49 +3,73 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer')
     uglify = require('gulp-uglify'),
-    pump =  require('pump');
+    pump = require('pump'),
+    browserSync = require('browser-sync').create();
 
 //CONVERT SASS  
-gulp.task('styles', function() {
+gulp.task('sass', function () {
     gulp.src('assets/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('assets/css'));
-});
-
-//AUTOPREFIX CSS
-gulp.task('autoprefix', function() {
-    gulp.src('assets/css/*.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('assets/css'))
 });
 
 //MINIFY CSS
-gulp.task('minify', function() {
-  return gulp.src('assets/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/css'));
+gulp.task('minify', function () {
+    return gulp.src('assets/css/*.css')
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 3 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 //COMPRESS JS
 gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('assets/js/*.js'),
-        uglify(),
-        gulp.dest('dist/js')
-    ],
-    cb
-  );
+    pump([
+            gulp.src('assets/js/*.js'),
+            uglify(),
+            gulp.dest('dist/js')
+        ],
+        cb
+    );
 });
 
-//WATCHING
-gulp.task('watch',function() {
-    gulp.watch('assets/scss/*.scss',['styles']);
-    gulp.watch('assets/css/*.css',['autoprefix']);
-    gulp.watch('assets/css/*.css', ['minify']);
-    gulp.watch('assets/js/*.js', ['compress']);
-});
+// //BROWSER SYNC
+// gulp.task('browser-sync', function () {
+//     browserSync.init({
+//         server: {
+//             baseDir: "./dist"
+//         }
+//     });
+// });
 
-gulp.task('default', ['watch', 'minify', 'autoprefix', 'compress']);
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+    
+        browserSync.init({
+            server: "./dis"
+        });
+    
+        gulp.watch('assets/scss/*.scss', ['sass'])
+        gulp.watch('assets/css/*.css', ['minify']).on('change', browserSync.reload);
+        gulp.watch('assets/js/*.js', ['compress']);
+        gulp.watch("dist/*.html").on('change', browserSync.reload);
+    });
+
+// //WATCHING
+// gulp.task('watch', ['browser-sync'], function () {
+//     gulp.watch('assets/scss/*.scss', ['sass'])
+//     gulp.watch('assets/css/*.css', ['minify']).on('change', browserSync.reload);
+//     gulp.watch('assets/js/*.js', ['compress']);
+//     gulp.watch("dist/*.html").on('change', browserSync.reload);
+// });
+
+// gulp.task('default', ['watch', 'minify', 'compress']);
+
+gulp.task('default', ['serve']);
