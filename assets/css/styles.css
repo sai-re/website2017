@@ -102,7 +102,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
   color: #888888; }
 
 html,
@@ -112,7 +112,7 @@ body {
 .header {
   width: 100%;
   height: 100vh;
-  color: #eeeeee;
+  color: #f6f6f6;
   font-weight: 300; }
   .header .header__container {
     width: 80%;
@@ -135,7 +135,7 @@ body {
 
 .gallery-header {
   width: 100%;
-  color: #eeeeee;
+  color: #f6f6f6;
   font-weight: 300;
   background-color: #3C7A89;
   transition: background-color .3s; }
@@ -186,7 +186,7 @@ body {
   left: 0;
   z-index: 1;
   overflow-x: hidden;
-  background-color: #eeeeee;
+  background-color: #f6f6f6;
   font-size: 1.5em;
   transition: 0.3s;
   display: none; }
@@ -260,12 +260,16 @@ body {
     text-decoration: none;
     letter-spacing: 1px;
     background-color: #3C7A89;
-    color: #eeeeee;
+    color: #f6f6f6;
     font-weight: 300;
-    transition: background-color .3s;
-    transition: opacity .3s; }
+    transition: all .15s ease; }
     .button .button__text:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
       opacity: 0.8; }
+    .button .button__text:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); }
 
 .tech {
   padding: 3.75rem 0;
@@ -302,7 +306,7 @@ body {
       background-color: #3C7A89;
       transition: background-color .3s; }
     .tech .tech__primary .primary__text {
-      color: #eeeeee;
+      color: #f6f6f6;
       text-transform: uppercase;
       font-size: 1.125rem;
       font-weight: 300;
@@ -325,7 +329,7 @@ body {
       background-color: #3C7A89;
       transition: background-color .3s; }
     .tech .tech__secondary .secondary__text {
-      color: #eeeeee;
+      color: #f6f6f6;
       font-size: 0.875rem;
       font-weight: 300;
       text-align: center; }
@@ -453,11 +457,11 @@ body {
     .nav .nav__item:last-child {
       padding: 0; }
     .nav .nav__link {
-      color: #eeeeee;
+      color: #f6f6f6;
       display: block;
       transition: transform .2s; }
     .nav .nav__link:hover {
-      transform: translateY(-5px); }
+      transform: translateY(-3px); }
   .gallery .gallery__item {
     width: 30%; }
   .bio .bio__text {

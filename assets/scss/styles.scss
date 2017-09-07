@@ -5,7 +5,7 @@
 $bp-600: 37.5rem;
 $bp-900: 56.25rem;
 $bp-1200: 75rem;
-$white: #eeeeee;
+$white: #f6f6f6;
 $primary: #3C7A89;
 $text: #888888;
 $secondary: #3C7A89;
@@ -43,6 +43,12 @@ $px-60: 3.75rem;
 
 @mixin section() {
     padding: $px-60 0;
+}
+
+@mixin breakpoint($width) {
+    @media screen and (min-width: $width) {
+
+    }
 }
 
 //ANIMATION
@@ -235,10 +241,18 @@ body {
         background-color: $primary;
         color: $white;
         font-weight: 300;
-        transition: background-color .3s;
-        transition: opacity .3s;
+        transition: all .15s ease;
+        // transition: background-color .3s;
+        // transition: opacity .3s;
         &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
             opacity: 0.8;
+        }
+
+        &:active {
+            transform: translateY(1px);
+            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
         }
     }
 }
@@ -473,7 +487,7 @@ body {
             transition: transform .2s;
         }
         .nav__link:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
         }
     }
     .gallery {
