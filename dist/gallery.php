@@ -29,8 +29,7 @@ require_once 'instagram.php';
 
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="index.html#bio">bio</a></li>
-                    <li class="nav__item"><a class="nav__link" href="index.html#tech">tech</a></li>
+                    <li class="nav__item"><a class="nav__link" href="index.html">home</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">gallery</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
                 </ul>
