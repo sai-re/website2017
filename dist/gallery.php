@@ -58,7 +58,7 @@ require_once 'instagram.php';
             </div>
         </section>
 
-        <section class="contact" id="contact">
+        <section class="contact contact--gallery" id="contact">
             <div class="contact__container">
                 <h3 class="contact__title">contact</h3>
                 <ul class="icons">
@@ -78,7 +78,7 @@ require_once 'instagram.php';
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer footer--gallery">
         <div class="footer__container">
             <p class="footer__msg">2017 Designed and developed by <span class="msg__highlight">Siavoush Redhai</span></p>
         </div>
