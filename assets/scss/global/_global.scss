@@ -4,7 +4,7 @@ $bp-900: 56.25rem;
 $bp-1200: 75rem;
 
 $white: #f6f6f6;
-$background: #efefef;
+$background: #f3f3f3;
 $primary: #3C7A89;
 $text: #888888;
 $secondary: #3C7A89;
@@ -25,8 +25,6 @@ body {
     -moz-font-feature-settings: "liga" on;
     background-color: $background;
     color: $text;
-
-    // transition: margin-left .5s;
 }
 
 html,

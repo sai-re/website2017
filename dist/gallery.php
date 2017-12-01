@@ -1,5 +1,5 @@
 <?php 
-require_once 'instagram.php';
+    require_once 'instagram.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,28 +16,27 @@ require_once 'instagram.php';
 </head>
 
 <body>
-    <header class="gallery-header" id="gallery-header">
-        <section class="section-holder gallery-header__container">
-
+    <header class="header-gallery" id="header-gallery">
+        <section class="section-holder header-gallery__container">
             <div class="header__mb-menu">
                 <button class="hamburger hamburger--spin" type="button" id="hamburger">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
                 </button>
             </div>
 
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="index.html">home</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">gallery</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a class="header__nav-link" href="index.html">home</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="gallery.php">gallery</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="#">contact</a></li>
                 </ul>
             </nav>
 
-            <div class="main">
+            <div class="header__hero">
                 <object class="instagram" data="images/imgres-01.svg" type="image/svg+xml"></object>
-                <h1 class="main__title">Gallery</h1>
+                <h1 class="header__title">Gallery</h1>
             </div>
         </section>
     </header>
@@ -60,18 +59,23 @@ require_once 'instagram.php';
         <section class="page-section contact contact--gallery" id="contact">
             <div class="section-holder contact__container">
                 <h3 class="contact__title">contact</h3>
-                <ul class="icons">
-                    <li class="icons__item">
-                        <a href="#" class="icons__link"><object class="icons__svg" data="images/github.svg" type="image/svg+xml"></object></a>
+
+                <ul class="contact__icons">
+                    <li class="contact__icons-item">
+                        <a href="#" class="contact__icons-link"><object class="contact__icons-svg" data="images/github.svg" type="image/svg+xml"></object></a>
                     </li>
-                    <li class="icons__item">
-                        <a href="#" class="icons__link"><object class="icons__svg" data="images/mail.svg" type="image/svg+xml"></object></a>
+
+                    <li class="contact__icons-item">
+                        <a href="#" class="contact__icons-link"><object class="contact__icons-svg" data="images/mail.svg" type="image/svg+xml"></object></a>
                     </li>
-                    <li class="icons__item">
-                        <a href="#" class="icons__link"><object class="icons__svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
+
+                    <li class="contact__icons-item">
+                        <a href="#" class="contact__icons-link"><object class="contact__icons-svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
                     </li>
                 </ul>
+
                 <p class="contact__msg">Feel free to get in touch</p>
+
                 <a class="contact__link" href="#">back to top</a>
             </div>
         </section>

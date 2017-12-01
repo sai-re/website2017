@@ -1,30 +1,21 @@
-.bio {
-    // @include section(); // height: 100vh;
+.bio__title {
+    @include secondary__title();
+    margin-top: $px-15;
+}
 
-    .bio__container {
-        // @include section-container();
-        @include column-center();
+.bio__text {
+    margin-top: $px-15;
+
+    @include breakpoint($bp-900) {
+        width: 80%;
     }
 
-    .bio__title {
-        @include secondary__title();
-        margin-top: $px-15;
-    }
-
-    .bio__text {
-        margin-top: $px-15;
-
-        @include breakpoint($bp-900) {
-            width: 80%;
-        }
-
-        @include breakpoint($bp-1200) {
-            width: 55%;
-        }
+    @include breakpoint($bp-1200) {
+        width: 55%;
     }
 }
 
-.button {
+.bio__button {
     margin-top: $px-60;
     width: 100%;
     text-align: center;
@@ -38,27 +29,26 @@
         width: 12.5rem;
     }
 
-    .button__text {
-        display: block;
-        padding: $px-15 $px-45;
-        font-size: 1em;
-        text-decoration: none;
-        letter-spacing: 1px;
-        background-color: $primary;
-        color: $white;
-        font-weight: 300;
-        transition: all .15s ease;
-        // transition: background-color .3s;
-        // transition: opacity .3s;
-        &:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-            // opacity: 0.8;
-        }
+}
 
-        &:active {
-            transform: translateY(1px);
-            box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-        }
+.bio__button-text {
+    display: block;
+    padding: $px-15 $px-45;
+    font-size: 1em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: $primary;
+    color: $white;
+    font-weight: 300;
+    transition: all .15s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     }
 }

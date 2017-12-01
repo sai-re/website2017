@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     //declaring variaables 
     var hamburger = document.querySelector(".hamburger"),
-        nav = document.querySelector(".nav"),
-        navLinks = document.querySelectorAll('.nav__link'),
+        nav = document.querySelector(".header__nav"),
+        navLinks = document.querySelectorAll('.header__nav-link'),
         backToTop = document.querySelector('.contact__link'),
         body = document.getElementsByTagName("body");
         
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     //function to randomly change colours on page refresh
     function displaycolours() {
-        var icons = document.querySelectorAll(".icons__svg"),
+        var icons = document.querySelectorAll(".contact__icons-svg"),
             instagram = document.querySelectorAll(".instagram");;
 
         //array of objects containing colours
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             { colour: '#F39C12' }
         ];
 
-        var tech = document.querySelectorAll('.box'),
-            buttons = document.querySelectorAll('.button__text'),
+        var tech = document.querySelectorAll('.tech__box'),
+            buttons = document.querySelectorAll('.bio__button-text'),
             randomNumber = Math.floor(Math.random() * colourlist.length),
             i;
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             //header backgrounds
             insertCss('.header::before', 'background', colourlist[randomNumber].colour);
-            insertCss('.gallery-header', 'background', colourlist[randomNumber].colour);
+            insertCss('.header-gallery', 'background', colourlist[randomNumber].colour);
 
             //skill boxes and buttons backgrounds
             loopItem(tech);
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //call all functions
     scrollTo(navLinks[2], 'contact');
     scrollTo(backToTop, 'header');
-    scrollTo(backToTop, 'gallery-header');
+    scrollTo(backToTop, 'header-gallery');
 
     displaycolours();
 });

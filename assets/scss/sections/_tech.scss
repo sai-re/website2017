@@ -1,112 +1,104 @@
 .tech {
-    // @include section(); // height: 100vh;
     background-color: #ffffff;
+}
 
-    .tech__container {
-        // @include section-container();
-        @include column-center();
+.tech__title {
+    @include secondary__title();
+}
+
+.tech__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    transition: background-color .3s;
+}
+
+.tech__primary,
+.tech__secondary {
+    @include flex-list();
+    margin-top: $px-30;    
+}
+
+.tech__primary {
+    width: 100%;
+
+    @include breakpoint($bp-600) {
+        width: 53.5%;
     }
 
-    .tech__title {
-        @include secondary__title();
-    }
+    @include breakpoint($bp-900) {
+        width: 362px;
 
-    .tech__primary {
-        @include flex-list();
-        width: 100%;
-        margin-top: $px-30;
-
-        @include breakpoint($bp-600) {
-            width: 53.5%;
+        li:nth-child(1) {
+            border-top: none;
+            border-left: none;
         }
-
-        @include breakpoint($bp-900) {
-            width: 362px;
-
-            li:nth-child(1) {
-                border-top: none;
-                border-left: none;
-            }
-            li:nth-child(2) {
-                border-top: none;
-                border-right: none;
-            }
-            li:nth-child(3) {
-                border-left: none;
-            }
-            li:nth-child(4) {
-                border-right: none;
-            }
-            li:nth-child(5) {
-                border-bottom: none;
-                border-left: none;
-            }
-            li:nth-child(6) {
-                border-bottom: none;
-                border-right: none;
-            }
+        li:nth-child(2) {
+            border-top: none;
+            border-right: none;
         }
-
-        .primary__item {
-            margin: auto;
-            padding: 1.18rem; // border: 1px solid $text;
-            list-style-type: none;
-
-            @include breakpoint($bp-900) {
-                margin: 0;
-                padding: 2.813rem;
-                border: 1px solid #CCCCCC;
-            }
+        li:nth-child(3) {
+            border-left: none;
         }
-
-        .primary__box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 5.625rem;
-            height: 5.625rem;
-            background-color: $primary;
-            transition: background-color .3s;
+        li:nth-child(4) {
+            border-right: none;
         }
-
-        .primary__text {
-            color: $white;
-            text-transform: uppercase;
-            font-size: 1.125rem;
-            font-weight: 300;
-            letter-spacing: 1px;
+        li:nth-child(5) {
+            border-bottom: none;
+            border-left: none;
+        }
+        li:nth-child(6) {
+            border-bottom: none;
+            border-right: none;
         }
     }
+}
 
-    .tech__secondary {
-        @include flex-list();
-        margin-top: $px-30;
+.tech__primary-item {
+    margin: auto;
+    padding: 1.18rem;
+    list-style-type: none;
 
-        .secondary__item {
-            margin: auto;
-            list-style-type: none;
-            padding: 0.65rem;
-
-            @include breakpoint($bp-900) {
-                padding: 0 0.9375rem;
-            }
-        }
-
-        .secondary__box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 3.75rem;
-            height: 3.75rem;
-            background-color: $primary;
-            transition: background-color .3s;
-        }
-
-        .secondary__text {
-            color: $white;
-            font-size: 0.875rem;
-            font-weight: 300;
-            text-align: center;
-        }
+    @include breakpoint($bp-900) {
+        margin: 0;
+        padding: 2.813rem;
+        border: 1px solid #e2e2e2;
     }
+}
+
+.tech__primary-box {
+    width: 5.625rem;
+    height: 5.625rem;
+}
+
+.tech__primary-text {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+//SECONDARY
+.tech__secondary-item {
+    margin: auto;
+    list-style-type: none;
+    padding: 0.65rem;
+
+    @include breakpoint($bp-900) {
+        padding: 0 0.9375rem;
+    }
+}
+
+.tech__secondary-box {
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+.tech__secondary-text {
+    color: $white;
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: center;
 }

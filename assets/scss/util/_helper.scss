@@ -16,6 +16,7 @@
     color: #666;
     font-size: 1.5rem;
     line-height: 100%;
+    letter-spacing: 2px;
 }
 
 @mixin flex-list() {
@@ -23,17 +24,6 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
-
-//MIXINS
-// @mixin section-container() {
-//     width: 80%;
-//     max-width: 71.25rem;
-//     margin: auto;
-// }
-
-// @mixin section() {
-//     padding: $px-60 0;
-// }
 
 //ANIMATION
 @keyframes upDown {
@@ -53,6 +43,7 @@
 }
 
 .section-holder {
+    @include column-center();
     width: 80%;
     max-width: 71.25rem;
     margin: auto;

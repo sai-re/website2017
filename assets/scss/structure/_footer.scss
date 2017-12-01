@@ -1,10 +1,7 @@
 .footer {
-    // @include section();
     background-color: #ffffff;
 
     .footer__container {
-        // @include section-container();
-        @include column-center();
         text-align: center;
     }
     

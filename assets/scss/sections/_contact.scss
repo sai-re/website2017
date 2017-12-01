@@ -1,53 +1,39 @@
-.contact {
-    // @include section();
+.contact__title {
+    @include secondary__title();
+}
 
-    .contact__container {
-        // @include section-container();
-        @include column-center();
+.contact__icons {
+    @include flex-list();
+
+}
+
+.contact__icons-item {
+    padding: $px-30 0.9rem;
+    list-style-type: none;
+
+    @include breakpoint($bp-600) {
+        padding: $px-30;
     }
+}
 
-    .contact__title {
-        @include secondary__title();
-    }
+.contact__icons-link {
+    display: block;
+    transition: transform .2s;            
+}
 
-    .icons {
-        @include flex-list();
+.contact__icons-link:hover {
+    transform: scale(1.1);
+}
 
-        .icons__item {
-            padding: $px-30 0.9rem;
-            list-style-type: none;
+.contact__icons-svg {
+    pointer-events: none;
+}
 
-            @include breakpoint($bp-600) {
-                padding: $px-30;
-            }
-        }
-
-        .icons__link {
-            display: block;
-            transition: transform .2s;            
-        }
-
-        .icons__link:hover {
-            transform: scale(1.1);
-        }
-
-        .icons__svg {
-            pointer-events: none;
-        }
-    }
-
-    .contact__link {
-        margin-top: $px-30;
-        display: block;
-        color: #666;
-        text-decoration: none;
-        transition: transform .2s;
-    }
-
-    .contact__link:hover {
-        transform: translateY(-3px);
-    }
-    
+.contact__link {
+    margin-top: $px-30;
+    display: block;
+    color: #666;
+    text-decoration: none;
 }
 
 .contact--gallery {
