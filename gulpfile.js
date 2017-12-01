@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 //CONVERT SASS  
 gulp.task('sass', function () {
-    gulp.src('assets/scss/*.scss')
+    gulp.src('assets/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('assets/css'))
 });
@@ -40,36 +40,16 @@ gulp.task('compress', function (cb) {
     );
 });
 
-// //BROWSER SYNC
-// gulp.task('browser-sync', function () {
-//     browserSync.init({
-//         server: {
-//             baseDir: "./dist"
-//         }
-//     });
-// });
-
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
-    
-        browserSync.init({
-            server: "./dist"
-        });
-    
-        gulp.watch('assets/scss/*.scss', ['sass'])
-        gulp.watch('assets/css/*.css', ['minify']).on('change', browserSync.reload);
-        gulp.watch('assets/js/*.js', ['compress']);
-        gulp.watch("dist/*.html").on('change', browserSync.reload);
+    browserSync.init({
+        server: "./dist"
     });
 
-// //WATCHING
-// gulp.task('watch', ['browser-sync'], function () {
-//     gulp.watch('assets/scss/*.scss', ['sass'])
-//     gulp.watch('assets/css/*.css', ['minify']).on('change', browserSync.reload);
-//     gulp.watch('assets/js/*.js', ['compress']);
-//     gulp.watch("dist/*.html").on('change', browserSync.reload);
-// });
-
-// gulp.task('default', ['watch', 'minify', 'compress']);
+    gulp.watch('assets/scss/**/*.scss', ['sass'])
+    gulp.watch('assets/css/*.css', ['minify']).on('change', browserSync.reload);
+    gulp.watch('assets/js/*.js', ['compress']);
+    gulp.watch("dist/*.html").on('change', browserSync.reload);
+});
 
 gulp.task('default', ['serve']);

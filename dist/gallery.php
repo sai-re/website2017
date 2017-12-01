@@ -17,9 +17,9 @@ require_once 'instagram.php';
 
 <body>
     <header class="gallery-header" id="gallery-header">
-        <div class="gallery-header__container">
+        <section class="section-holder gallery-header__container">
 
-            <div class="mb-menu">
+            <div class="header__mb-menu">
                 <button class="hamburger hamburger--spin" type="button" id="hamburger">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
@@ -39,11 +39,10 @@ require_once 'instagram.php';
                 <object class="instagram" data="images/imgres-01.svg" type="image/svg+xml"></object>
                 <h1 class="main__title">Gallery</h1>
             </div>
-        </div>
+        </section>
     </header>
 
     <main>
-
         <section class="gallery">
             <div class="gallery__container">
                 <ul class="gallery__list">
@@ -58,8 +57,8 @@ require_once 'instagram.php';
             </div>
         </section>
 
-        <section class="contact contact--gallery" id="contact">
-            <div class="contact__container">
+        <section class="page-section contact contact--gallery" id="contact">
+            <div class="section-holder contact__container">
                 <h3 class="contact__title">contact</h3>
                 <ul class="icons">
                     <li class="icons__item">
@@ -78,8 +77,8 @@ require_once 'instagram.php';
         </section>
     </main>
 
-    <footer class="footer footer--gallery">
-        <div class="footer__container">
+    <footer class="page-section footer footer--gallery">
+        <div class="section-holder footer__container">
             <p class="footer__msg">2017 Designed and developed by <span class="msg__highlight">Siavoush Redhai</span></p>
         </div>
     </footer>

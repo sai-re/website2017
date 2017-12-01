@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             { colour: '#1E8BC3' }, 
             { colour: '#EC644B' }, 
             { colour: '#4DAF7C' },
-            { colour: '#336E7B' }
+            { colour: '#F39C12' }
         ];
 
         var tech = document.querySelectorAll('.box'),

@@ -1,0 +1,59 @@
+@mixin breakpoint($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin column-center() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin secondary__title() {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 100%;
+}
+
+@mixin flex-list() {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+//MIXINS
+// @mixin section-container() {
+//     width: 80%;
+//     max-width: 71.25rem;
+//     margin: auto;
+// }
+
+// @mixin section() {
+//     padding: $px-60 0;
+// }
+
+//ANIMATION
+@keyframes upDown {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(10px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+.page-section {
+    padding: $px-60 0;
+}
+
+.section-holder {
+    width: 80%;
+    max-width: 71.25rem;
+    margin: auto;
+}

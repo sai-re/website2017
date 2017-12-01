@@ -1,0 +1,35 @@
+//VARIABLES
+$bp-600: 37.5rem;
+$bp-900: 56.25rem;
+$bp-1200: 75rem;
+
+$white: #f6f6f6;
+$background: #efefef;
+$primary: #3C7A89;
+$text: #888888;
+$secondary: #3C7A89;
+
+$px-15: 0.9375rem;
+$px-30: 1.875rem;
+$px-45: 2.813rem;
+$px-60: 3.75rem;
+
+//BEGIN
+body {
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: "Lato", sans-serif, helvetica;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga" on;
+    background-color: $background;
+    color: $text;
+
+    // transition: margin-left .5s;
+}
+
+html,
+body {
+    height: 100%;
+}
