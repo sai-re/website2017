@@ -189,4 +189,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     scrollTo(backToTop, 'header-gallery');
 
     displaycolours();
+
+    function animateBoxIn() {
+        var box = document.getElementsByClassName("tech__primary-box");
+        var secondaryBox = document.querySelector(".tech__secondary");
+
+        window.addEventListener('scroll', function() { 
+            scrollpos = window.scrollY;
+            
+            if(scrollpos > 1033){
+                box[0].classList.add("tech-animate-in");
+                box[1].classList.add("tech-animate-in");
+            }
+    
+            if(scrollpos > 1233){
+                box[2].classList.add("tech-animate-in");
+                box[3].classList.add("tech-animate-in");
+            }
+    
+            if(scrollpos > 1333){
+                box[4].classList.add("tech-animate-in");
+                box[5].classList.add("tech-animate-in");
+            }
+
+            if(scrollpos > 1433){
+                secondaryBox.classList.add("tech-fade-in");
+            }
+        });
+    }
+    
+    animateBoxIn();
 });
