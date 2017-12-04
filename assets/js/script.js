@@ -183,13 +183,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-    //call all functions
-    scrollTo(navLinks[2], 'contact');
-    scrollTo(backToTop, 'header');
-    scrollTo(backToTop, 'header-gallery');
-
-    displaycolours();
-
+    //Function to animate blocks in depending on scroll bar position
     function animateBoxIn() {
         var box = document.getElementsByClassName("tech__primary-box");
         var secondaryBox = document.querySelector(".tech__secondary");
@@ -218,5 +212,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
     
-    animateBoxIn();
+    //call all functions
+    scrollTo(navLinks[2], 'contact');
+    scrollTo(backToTop, 'header');
+    scrollTo(backToTop, 'header-gallery');
+
+    var mediaQ = window.matchMedia("(min-width:75rem)");
+
+    if (document.documentElement.clientWidth > 1200) {
+        animateBoxIn();
+    }
+    
+    displaycolours();
+
 });
