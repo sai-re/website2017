@@ -6,8 +6,16 @@
     .gallery__list {
         // display: flex;
         // flex-wrap: wrap;
-        column-count: 3;
+        column-count: 1;
         column-gap: 0;
+
+        @include breakpoint($bp-600) {
+            column-count: 2;            
+        }
+
+        @include breakpoint($bp-900) {
+            column-count: 3;            
+        }
     }
 
     .gallery__item {

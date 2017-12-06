@@ -283,8 +283,14 @@ html {
   margin-top: 0; }
 
 .gallery .gallery__list {
-  column-count: 3;
+  column-count: 1;
   column-gap: 0; }
+  @media screen and (min-width: 37.5rem) {
+    .gallery .gallery__list {
+      column-count: 2; } }
+  @media screen and (min-width: 56.25rem) {
+    .gallery .gallery__list {
+      column-count: 3; } }
 
 .gallery .gallery__item {
   list-style-type: none; }
