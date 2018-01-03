@@ -9,14 +9,14 @@
   "author": "Sai",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.4.2",
-    "gulp-pug": "^3.2.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "pump": "^1.0.2"
+    "pump": "^2.0.0"
   },
   "dependencies": {}
 }
