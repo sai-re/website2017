@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Siavoush Redhai | Web Developer | Gallery</title>
-    <!--<base href="http://siavoush-re.co.uk">-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -28,7 +27,7 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a class="header__nav-link" href="index.html">home</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="http://siavoush-re.co.uk">home</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="gallery.php">gallery</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="#">contact</a></li>
                 </ul>
@@ -62,15 +61,15 @@
 
                 <ul class="contact__icons">
                     <li class="contact__icons-item">
-                        <a href="#" class="contact__icons-link"><object class="contact__icons-svg" data="images/github.svg" type="image/svg+xml"></object></a>
+                        <a href="https://github.com/sai-re" class="contact__icons-link"><object class="contact__icons-svg" data="images/github.svg" type="image/svg+xml"></object></a>
                     </li>
 
                     <li class="contact__icons-item">
-                        <a href="#" class="contact__icons-link"><object class="contact__icons-svg" data="images/mail.svg" type="image/svg+xml"></object></a>
+                        <a href="mailto:contact@siavoush-re.co.uk" class="contact__icons-link"><object class="contact__icons-svg" data="images/mail.svg" type="image/svg+xml"></object></a>
                     </li>
 
                     <li class="contact__icons-item">
-                        <a href="#" class="contact__icons-link"><object class="contact__icons-svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
+                        <a href="https://uk.linkedin.com/in/siavoush-redhai-b02377a5" class="contact__icons-link"><object class="contact__icons-svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
                     </li>
                 </ul>
 
