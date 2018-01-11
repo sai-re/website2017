@@ -322,6 +322,10 @@ html {
     .bio__text {
       width: 55%; } }
 
+.bio__gallery {
+  color: #ec644a;
+  text-decoration: none; }
+
 .bio__button {
   margin-top: 3.75rem;
   width: 100%;
