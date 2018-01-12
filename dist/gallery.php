@@ -29,7 +29,7 @@
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a class="header__nav-link" href="http://siavoush-re.co.uk">home</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="gallery.php">gallery</a></li>
-                    <li class="header__nav-item"><a class="header__nav-link" href="#">contact</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="javascript:void(0)">contact</a></li>
                 </ul>
             </nav>
 
@@ -75,7 +75,7 @@
 
                 <p class="contact__msg">Feel free to get in touch</p>
 
-                <a class="contact__link" href="#">back to top</a>
+                <a class="contact__link" href="javascript:void(0)">back to top</a>
             </div>
         </section>
     </main>
