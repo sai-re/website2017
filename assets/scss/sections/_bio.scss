@@ -1,3 +1,14 @@
+.bio__portrait,
+.bio__title,
+.bio__text,
+.bio__button {
+    @include breakpoint($bp-1200) {
+        transform: translateY(60px);
+        opacity: 0;
+        transition: all 1s ease;
+    }
+}
+
 .bio__title {
     @include secondary__title();
     margin-top: $px-15;
@@ -33,7 +44,6 @@
     @include breakpoint($bp-900) {
         width: 12.5rem;
     }
-
 }
 
 .bio__button-text {

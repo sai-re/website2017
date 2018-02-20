@@ -91,11 +91,6 @@
     }
 }
 
-.tech-animate-in {
-    transform: translateX(0px) !important;
-    opacity: 1 !important;
-}
-
 .tech__primary-text {
     color: $white;
     text-transform: uppercase;
@@ -110,10 +105,6 @@
         opacity: 0;
         transition: all 2s ease;
     }
-}
-
-.tech-fade-in {
-    opacity: 1 !important;
 }
 
 .tech__secondary-item {

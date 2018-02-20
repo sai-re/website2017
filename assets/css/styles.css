@@ -109,6 +109,13 @@ html {
   100% {
     transform: translateY(0); } }
 
+.animate-in {
+  transform: translateX(0px) !important;
+  opacity: 1 !important; }
+
+.fade-in {
+  opacity: 1 !important; }
+
 .page-section {
   padding: 3.75rem 0; }
 
@@ -304,6 +311,15 @@ html {
 .gallery .gallery__img:hover {
   filter: grayscale(0%); }
 
+@media screen and (min-width: 75rem) {
+  .bio__portrait,
+  .bio__title,
+  .bio__text,
+  .bio__button {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 1s ease; } }
+
 .bio__title {
   text-transform: uppercase;
   font-weight: 300;
@@ -433,10 +449,6 @@ html {
   .tech__primary-item:last-child .tech__primary-box {
     transform: translateX(150px); } }
 
-.tech-animate-in {
-  transform: translateX(0px) !important;
-  opacity: 1 !important; }
-
 .tech__primary-text {
   color: #f6f6f6;
   text-transform: uppercase;
@@ -448,9 +460,6 @@ html {
   .tech__secondary {
     opacity: 0;
     transition: all 2s ease; } }
-
-.tech-fade-in {
-  opacity: 1 !important; }
 
 .tech__secondary-item {
   margin: auto;

@@ -185,29 +185,57 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     //Function to animate blocks in depending on scroll bar position
     function animateBoxIn() {
-        var box = document.getElementsByClassName("tech__primary-box");
-        var secondaryBox = document.querySelector(".tech__secondary");
+        var box = document.getElementsByClassName("tech__primary-box"),
+            secondaryBox = document.querySelector(".tech__secondary"),
+            bioPic = document.querySelector(".bio__portrait"),
+            bioTitle = document.querySelector(".bio__title");
+            bioText = document.querySelectorAll(".bio__text"),
+            bioBtn = document.querySelector(".bio__button");
 
         window.addEventListener('scroll', function() { 
             scrollpos = window.scrollY;
             
+            if(scrollpos > 300){
+                bioPic.classList.add("animate-in");
+            }
+
+            if(scrollpos > 450){
+                setTimeout(function() {
+                    bioTitle.classList.add("animate-in");
+                }, 300)
+            }
+
+            if(scrollpos > 600){
+                setTimeout(function() {
+                    var i,
+                        textLength = bioText.length;
+                    for (i = 0; i < textLength; i++) {
+                        bioText[i].classList.add("animate-in");
+                    }
+                }, 300)
+            }
+            
+            if(scrollpos > 750){
+                bioBtn.classList.add("animate-in");
+            }
+
             if(scrollpos > 1033){
-                box[0].classList.add("tech-animate-in");
-                box[1].classList.add("tech-animate-in");
+                box[0].classList.add("animate-in");
+                box[1].classList.add("animate-in");
             }
     
             if(scrollpos > 1233){
-                box[2].classList.add("tech-animate-in");
-                box[3].classList.add("tech-animate-in");
+                box[2].classList.add("animate-in");
+                box[3].classList.add("animate-in");
             }
     
             if(scrollpos > 1333){
-                box[4].classList.add("tech-animate-in");
-                box[5].classList.add("tech-animate-in");
+                box[4].classList.add("animate-in");
+                box[5].classList.add("animate-in");
             }
 
             if(scrollpos > 1433){
-                secondaryBox.classList.add("tech-fade-in");
+                secondaryBox.classList.add("fade-in");
             }
         });
     }
