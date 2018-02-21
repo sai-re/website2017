@@ -28,11 +28,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         //array of objects containing colours
         var colourlist = [
-            { colour: '#F27935' }, 
+            { colour: '#EB9532' }, 
             { colour: '#1E8BC3' }, 
             { colour: '#EC644B' }, 
             { colour: '#4DAF7C' },
-            { colour: '#F39C12' }
+            { colour: '#95A5A6' },
+            { colour: '#947CB0' }
         ];
 
         var tech = document.querySelectorAll('.tech__box'),
@@ -200,19 +201,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
 
             if(scrollpos > 450){
-                setTimeout(function() {
-                    bioTitle.classList.add("animate-in");
-                }, 300)
+                bioTitle.classList.add("animate-in");
             }
 
             if(scrollpos > 600){
-                setTimeout(function() {
-                    var i,
-                        textLength = bioText.length;
-                    for (i = 0; i < textLength; i++) {
-                        bioText[i].classList.add("animate-in");
-                    }
-                }, 300)
+                var i,
+                    textLength = bioText.length;
+                for (i = 0; i < textLength; i++) {
+                    bioText[i].classList.add("animate-in");
+                }
             }
             
             if(scrollpos > 750){

@@ -7,6 +7,7 @@ body {
   text-rendering: optimizeLegibility;
   -moz-font-feature-settings: "liga" on;
   background-color: #f3f3f3;
+  background-image: url("../images/background-tile.png");
   color: #888888; }
 
 html,
@@ -260,7 +261,7 @@ html {
   text-transform: uppercase; }
   @media screen and (min-width: 37.5rem) {
     .header__title {
-      font-size: 2.5rem; } }
+      font-size: 3rem; } }
 
 .header__secondary-title {
   font-size: 0.75em; }
