@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         ];
 
         var tech = document.querySelectorAll('.tech__box'),
+            projects = document.querySelectorAll('.projects__holder'),
             buttons = document.querySelectorAll('.bio__button-text'),
+            projectButtons = document.querySelectorAll('.projects__button-text'),
             randomNumber = Math.floor(Math.random() * colourlist.length),
             i;
 
@@ -46,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
             for (i = 0; i < item.length; i++) {
                 item[i].style.backgroundColor  = colourlist[randomNumber].colour;
             }
+        }
+
+        //Change colour text for projects
+        for (i = 0; i < projectButtons.length; i++) {
+            projectButtons[i].style.color = colourlist[randomNumber].colour;
         }
 
         //function to change fill colour of svg
@@ -96,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             //skill boxes and buttons backgrounds
             loopItem(tech);
             loopItem(buttons);
+            loopItem(projects);
         }
     }
 

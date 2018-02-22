@@ -10,7 +10,6 @@
 }
 
 .bio__title {
-    @include secondary__title();
     margin-top: $px-15;
 }
 
@@ -33,41 +32,9 @@
 
 .bio__button {
     margin-top: $px-60;
-    width: 100%;
-    text-align: center;
-    font-size: 1rem;
-
-    @include breakpoint($bp-600) {
-        width: 50%;
-    }
-
-    @include breakpoint($bp-900) {
-        width: 12.5rem;
-    }
 }
 
 .bio__button-text {
-    display: block;
-    padding: $px-15 $px-45;
-    font-size: 1.125rem;
-    text-decoration: none;
-    letter-spacing: 1px;
     background-color: $primary;
     color: $white;
-    font-weight: 300;
-    transition: all .15s ease;
-
-    @include breakpoint ($bp-600) {
-        font-size: 1rem;
-    }
-
-    &:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    &:active {
-        transform: translateY(1px);
-        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    }
 }

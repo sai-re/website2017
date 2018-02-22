@@ -1,7 +1,3 @@
-.contact__title {
-    @include secondary__title();
-}
-
 .contact__icons {
     @include flex-list();
 
@@ -14,18 +10,10 @@
 
 .contact__icons-item:first-child {
     padding-left: 0;
-    
-    // @include breakpoint($bp-600) {
-    //     padding-left: $px-30;
-    // }
 }
 
 .contact__icons-item:last-child {
     padding-right: 0;
-
-    // @include breakpoint($bp-600) {
-    //     padding-right: $px-30;
-    // }
 }
 
 .contact__icons-link {

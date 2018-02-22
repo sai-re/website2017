@@ -10,19 +10,9 @@
     align-items: center;
 }
 
-@mixin secondary__title() {
-    text-transform: uppercase;
-    font-weight: 300;
-    color: #666;
-    font-size: 1.5rem;
-    line-height: 100%;
-    letter-spacing: 2px;
-}
-
 @mixin flex-list() {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
 }
 
 //ANIMATION
@@ -36,6 +26,15 @@
     100% {
         transform: translateY(0)
     }
+}
+
+.secondary__title {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 2px;
 }
 
 .animate-in {
@@ -59,5 +58,38 @@
     
     @include breakpoint($bp-600) {
         width: 80%;
+    }
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint($bp-600) {
+        width: 12.5rem;
+    }
+}
+
+.btn__text {
+    display: block;
+    padding: $px-15 $px-45;
+    font-size: 1.125rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 300;
+    transition: all .15s ease;
+
+    @include breakpoint ($bp-600) {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     }
 }

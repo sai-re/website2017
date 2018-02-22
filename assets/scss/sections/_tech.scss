@@ -2,10 +2,6 @@
     background-color: #ffffff;
 }
 
-.tech__title {
-    @include secondary__title();
-}
-
 .tech__box {
     display: flex;
     justify-content: center;
@@ -22,10 +18,6 @@
 
 .tech__primary {
     width: 100%;
-
-    // @include breakpoint($bp-600) {
-    //     width: 53.5%;
-    // }
 
     @include breakpoint($bp-600) {
         width: 362px;
@@ -58,7 +50,6 @@
 .tech__primary-item {
     margin: auto;
     padding: 1.18rem;
-    list-style-type: none;
 
     @include breakpoint($bp-600) {
         margin: 0;
@@ -109,11 +100,10 @@
 
 .tech__secondary-item {
     margin: auto;
-    list-style-type: none;
     padding: 0.65rem;
 
     @include breakpoint($bp-900) {
-        padding: 0 0.9375rem;
+        padding: 0 $px-15;
     }
 }
 

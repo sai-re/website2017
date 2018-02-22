@@ -1,0 +1,59 @@
+.projects__list {
+   @include flex-list;
+   width: 100%;
+   justify-content: center;
+
+   @include breakpoint(1400px) {
+       justify-content: space-between;
+   }
+}
+
+.projects__item {
+    list-style-type: none;
+    padding: $px-10 0;
+    
+    @include breakpoint($bp-900) {
+        margin-right: $px-15;
+    }
+}
+
+.projects__holder {
+    width: 100%;
+    padding: $px-60 $px-15;
+    text-align: center;
+
+    @include breakpoint($bp-600) {
+        width: 22.5rem;
+    }
+}
+
+.projects__item:not(:first-child) {
+    margin-top: $px-30;
+
+    @include breakpoint($bp-900) {
+        margin-top: 0;
+    }
+}
+
+.projects__title,
+.projects__text {
+    color: $white;
+}
+
+.projects__title {
+    letter-spacing: 1px;
+}
+
+.projects__text {
+    margin-top: $px-30;
+}
+
+.projects__button {
+    margin: $px-30 auto 0 auto;
+    width: 12.5rem;
+}
+
+.projects__button-text {
+    background-color: $white;
+    color: $text;
+}

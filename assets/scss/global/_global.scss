@@ -10,6 +10,7 @@ $text: #888888;
 $secondary: #3C7A89;
 
 $px-5: 0.3125rem;
+$px-10: 0.625rem;
 $px-15: 0.9375rem;
 $px-30: 1.875rem;
 $px-45: 2.813rem;
@@ -32,4 +33,8 @@ body {
 html,
 body {
     height: 100%;
+}
+
+li {
+    list-style-type: none;
 }
