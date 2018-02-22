@@ -23,11 +23,11 @@
 .tech__primary {
     width: 100%;
 
-    @include breakpoint($bp-600) {
-        width: 53.5%;
-    }
+    // @include breakpoint($bp-600) {
+    //     width: 53.5%;
+    // }
 
-    @include breakpoint($bp-900) {
+    @include breakpoint($bp-600) {
         width: 362px;
 
         li:nth-child(1) {
@@ -60,7 +60,7 @@
     padding: 1.18rem;
     list-style-type: none;
 
-    @include breakpoint($bp-900) {
+    @include breakpoint($bp-600) {
         margin: 0;
         padding: 2.813rem;
         border: 1px solid #e2e2e2;

@@ -17,10 +17,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    transform: skewY(-20deg);
     content: '';
     background-color: $primary;
     transition: background-color .1s;
+
+    @include breakpoint($bp-900) {
+        transform: skewY(-20deg);
+    }
 }
 
 //GALLERY

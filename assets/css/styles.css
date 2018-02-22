@@ -124,9 +124,12 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 90%;
   max-width: 71.25rem;
   margin: auto; }
+  @media screen and (min-width: 37.5rem) {
+    .section-holder {
+      width: 80%; } }
 
 .header {
   width: 100%;
@@ -144,10 +147,12 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
-  transform: skewY(-20deg);
   content: '';
   background-color: #3C7A89;
   transition: background-color .1s; }
+  @media screen and (min-width: 56.25rem) {
+    .header::before {
+      transform: skewY(-20deg); } }
 
 .header-gallery {
   width: 100%;
@@ -358,13 +363,16 @@ html {
 .bio__button-text {
   display: block;
   padding: 0.9375rem 2.813rem;
-  font-size: 1em;
+  font-size: 1.125rem;
   text-decoration: none;
   letter-spacing: 1px;
   background-color: #3C7A89;
   color: #f6f6f6;
   font-weight: 300;
   transition: all .15s ease; }
+  @media screen and (min-width: 37.5rem) {
+    .bio__button-text {
+      font-size: 1rem; } }
   .bio__button-text:hover {
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); }
@@ -401,9 +409,6 @@ html {
   width: 100%; }
   @media screen and (min-width: 37.5rem) {
     .tech__primary {
-      width: 53.5%; } }
-  @media screen and (min-width: 56.25rem) {
-    .tech__primary {
       width: 362px; }
       .tech__primary li:nth-child(1) {
         border-top: none;
@@ -426,7 +431,7 @@ html {
   margin: auto;
   padding: 1.18rem;
   list-style-type: none; }
-  @media screen and (min-width: 56.25rem) {
+  @media screen and (min-width: 37.5rem) {
     .tech__primary-item {
       margin: 0;
       padding: 2.813rem;
@@ -494,11 +499,14 @@ html {
   flex-direction: row; }
 
 .contact__icons-item {
-  padding: 1.875rem 0.9rem;
+  padding: 1.875rem;
   list-style-type: none; }
-  @media screen and (min-width: 37.5rem) {
-    .contact__icons-item {
-      padding: 1.875rem; } }
+
+.contact__icons-item:first-child {
+  padding-left: 0; }
+
+.contact__icons-item:last-child {
+  padding-right: 0; }
 
 .contact__icons-link {
   display: block;

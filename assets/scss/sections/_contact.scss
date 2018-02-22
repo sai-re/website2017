@@ -8,12 +8,24 @@
 }
 
 .contact__icons-item {
-    padding: $px-30 0.9rem;
+    padding: $px-30;
     list-style-type: none;
+}
 
-    @include breakpoint($bp-600) {
-        padding: $px-30;
-    }
+.contact__icons-item:first-child {
+    padding-left: 0;
+    
+    // @include breakpoint($bp-600) {
+    //     padding-left: $px-30;
+    // }
+}
+
+.contact__icons-item:last-child {
+    padding-right: 0;
+
+    // @include breakpoint($bp-600) {
+    //     padding-right: $px-30;
+    // }
 }
 
 .contact__icons-link {
