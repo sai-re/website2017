@@ -100,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             insertCss('.header::before', 'background', colourlist[randomNumber].colour);
             insertCss('.header-gallery', 'background', colourlist[randomNumber].colour);
 
+            if (document.documentElement.clientWidth < 900) {
+                insertCss('.header', 'background', colourlist[randomNumber].colour);
+            }
+
             //skill boxes and buttons backgrounds
             loopItem(tech);
             loopItem(buttons);
@@ -246,11 +250,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
     
     //call all functions
-    scrollTo(navLinks[2], 'contact');
+    scrollTo(navLinks[3], 'contact');
     scrollTo(backToTop, 'header');
     scrollTo(backToTop, 'header-gallery');
 
-    var mediaQ = window.matchMedia("(min-width:75rem)");
+    // var mediaQ = window.matchMedia("(min-width:75rem)");
 
     if (document.documentElement.clientWidth > 1200) {
         animateBoxIn();

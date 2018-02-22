@@ -58,7 +58,7 @@
 
         <section class="page-section contact contact--gallery" id="contact">
             <div class="section-holder contact__container">
-                <h3 class="contact__title">contact</h3>
+                <h3 class="secondary__title contact__title">contact</h3>
 
                 <ul class="contact__icons">
                     <li class="contact__icons-item">
