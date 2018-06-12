@@ -29,7 +29,7 @@
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a class="header__nav-link" href="http://siavoush-re.co.uk">home</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="projects.html">projects</a></li>
-                    <li class="header__nav-item"><a class="header__nav-link" href="gallery.php">gallery</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="gallery">gallery</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="javascript:void(0)">contact</a></li>
                 </ul>
             </nav>

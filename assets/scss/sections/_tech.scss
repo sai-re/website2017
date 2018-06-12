@@ -17,7 +17,7 @@
 }
 
 .tech__primary {
-    width: 100%;
+    width: 260px;
 
     @include breakpoint($bp-600) {
         width: 362px;
@@ -92,6 +92,13 @@
 
 //SECONDARY
 .tech__secondary {
+    width: 260px;
+
+    @include breakpoint($bp-600) {
+        width: 100%;
+        max-width: 650px;
+    }
+
     @include breakpoint($bp-1200) {
         opacity: 0;
         transition: all 2s ease;

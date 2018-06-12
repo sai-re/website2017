@@ -62,7 +62,8 @@
 }
 
 .btn {
-    width: 100%;
+    width: 220px;
+    // width: 12.5rem;
     text-align: center;
 
     @include breakpoint($bp-600) {
