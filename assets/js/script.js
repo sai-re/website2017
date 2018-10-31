@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var hamburger = document.querySelector(".hamburger"),
         nav = document.querySelector(".header__nav"),
         navLinks = document.querySelectorAll('.header__nav-link'),
+        arrowDown = document.getElementById('arrow-down'),
         backToTop = document.querySelector('.contact__link'),
         body = document.getElementsByTagName("body");
         
@@ -24,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //function to randomly change colours on page refresh
     function displaycolours() {
         var icons = document.querySelectorAll(".contact__icons-svg"),
-            instagram = document.querySelectorAll(".instagram");;
+            instagram = document.querySelectorAll(".instagram");
 
         //array of objects containing colours
         var colourlist = [
@@ -198,8 +199,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     //Function to animate blocks in depending on scroll bar position
     function animateBoxIn() {
-        var box = document.getElementsByClassName("tech__primary-box"),
-            secondaryBox = document.querySelector(".tech__secondary"),
+        var boxRowOne = document.querySelectorAll(".tech__primary-item:nth-child(-n + 4)"),
+            boxRowTwo = document.querySelectorAll(".tech__primary-item:nth-child(n + 5):nth-child(-n + 8)"),
+            boxRowThree = document.querySelectorAll(".tech__primary-item:nth-child(n + 9):nth-child(-n + 12)"),
+            boxRowFour = document.querySelectorAll(".tech__primary-item:nth-child(n + 13):nth-child(-n + 16)"),
             bioPic = document.querySelector(".bio__portrait"),
             bioTitle = document.querySelector(".bio__title");
             bioText = document.querySelectorAll(".bio__text"),
@@ -207,9 +210,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         window.addEventListener('scroll', function() { 
             scrollpos = window.scrollY;
-            
+
             if(scrollpos > 300){
-                bioPic.classList.add("animate-in");
+                // bioPic.classList.add("animate-in");
             }
 
             if(scrollpos > 450){
@@ -229,32 +232,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
 
             if(scrollpos > 1033){
-                box[0].classList.add("animate-in");
-                box[1].classList.add("animate-in");
+                boxRowOne.forEach(function(index) {
+                    index.classList.add("fade-in");
+                });
             }
     
             if(scrollpos > 1233){
-                box[2].classList.add("animate-in");
-                box[3].classList.add("animate-in");
+                boxRowTwo.forEach(function(index) {
+                    index.classList.add("fade-in");
+                });
             }
     
             if(scrollpos > 1333){
-                box[4].classList.add("animate-in");
-                box[5].classList.add("animate-in");
+                boxRowThree.forEach(function(index) {
+                    index.classList.add("fade-in");
+                });
             }
-
+    
             if(scrollpos > 1433){
-                secondaryBox.classList.add("fade-in");
+                boxRowFour.forEach(function(index) {
+                    index.classList.add("fade-in");
+                });
             }
         });
     }
     
     //call all functions
     scrollTo(navLinks[3], 'contact');
+    
+    if (arrowDown) {
+        scrollTo(arrowDown, 'bio');
+    }
+
     scrollTo(backToTop, 'header');
     scrollTo(backToTop, 'header-gallery');
-
-    // var mediaQ = window.matchMedia("(min-width:75rem)");
 
     if (document.documentElement.clientWidth > 1200) {
         animateBoxIn();

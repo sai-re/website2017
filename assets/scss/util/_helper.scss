@@ -43,7 +43,11 @@
 }
 
 .fade-in {
-    opacity: 1 !important;
+    transform: translateX(0px) !important;
+
+    .tech__primary-box {
+        opacity: 1 !important;
+    }
 }
 
 .page-section {
