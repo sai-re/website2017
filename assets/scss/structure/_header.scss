@@ -3,13 +3,13 @@
     width: 100%;
     color: $white;
     font-weight: 300;
-    background-color: $primary;
+    // background-color: $primary;
     transition: background-color .1s;
     padding-bottom: $px-30;
 
     @include breakpoint($bp-900) {
         height: 100vh;
-        background-color: initial;
+        // background-color: initial;
         padding-bottom: 0;
     }
 }
@@ -85,7 +85,7 @@
     @include breakpoint($bp-900) {
         margin-top: $px-60;
         height: auto;
-        width: auto;
+        // width: auto;
         position: static;
         top: auto;
         left: auto;

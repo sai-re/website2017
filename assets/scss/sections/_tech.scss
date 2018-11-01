@@ -34,10 +34,10 @@
 .tech__primary-box {
     width: 5.625rem;
     height: 5.625rem;
-    opacity: 0;
-
+    
     @include breakpoint($bp-1200) {
         transition: all 1s ease;
+        opacity: 0;
     }  
 }
 
@@ -50,23 +50,23 @@
 @include breakpoint($bp-1200) {
 
     // .tech__primary-item:nth-child(-n + 4) {
-    //     // border: 1px solid red;
-    //     transform: translateY(150px);
+    //     border: 1px solid red;
+    //     // transform: translateY(150px);
     // }
 
     // .tech__primary-item:nth-child(n + 5):nth-child(-n + 8) {
-    //     // border: 1px solid blue;
-    //     transform: translateY(150px);
+    //     border: 1px solid blue;
+    //     // transform: translateY(150px);
     // }
 
     // .tech__primary-item:nth-child(n + 9):nth-child(-n + 12) {
-    //     // border: 1px solid green;
-    //     transform: translateY(150px);
+    //     border: 1px solid green;
+    //     // transform: translateY(150px);
     // }
 
     // .tech__primary-item:nth-child(n + 13):nth-child(-n + 16) {
-    //     // border: 1px solid blue;
-    //     transform: translateY(150px);
+    //     border: 1px solid blue;
+    //     // transform: translateY(150px);
     // }
 
     .tech__primary-item:nth-child(-n + 4),

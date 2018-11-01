@@ -209,17 +209,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
             bioBtn = document.querySelector(".bio__button");
 
         window.addEventListener('scroll', function() { 
-            scrollpos = window.scrollY;
+            scrollpos = window.pageYOffset;
 
             if(scrollpos > 300){
                 // bioPic.classList.add("animate-in");
             }
 
-            if(scrollpos > 450){
+            if(scrollpos > 350){
                 bioTitle.classList.add("animate-in");
             }
 
-            if(scrollpos > 600){
+            if(scrollpos > 500){
                 var i,
                     textLength = bioText.length;
                 for (i = 0; i < textLength; i++) {
@@ -227,32 +227,48 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 }
             }
             
-            if(scrollpos > 750){
+            if(scrollpos > 650){
                 bioBtn.classList.add("animate-in");
             }
 
-            if(scrollpos > 1033){
-                boxRowOne.forEach(function(index) {
-                    index.classList.add("fade-in");
-                });
+            if(scrollpos > 933){
+                // boxRowOne.forEach(function(index) {
+                //     index.classList.add("fade-in");
+                // });
+
+                for (var i = 0; i < boxRowOne.length; i++) {
+                    boxRowOne[i].classList.add("fade-in");
+                }
+            }
+    
+            if(scrollpos > 1133){
+                // boxRowTwo.forEach(function(index) {
+                //     index.classList.add("fade-in");
+                // });
+
+                for (var i = 0; i < boxRowTwo.length; i++) {
+                    boxRowTwo[i].classList.add("fade-in");
+                }
             }
     
             if(scrollpos > 1233){
-                boxRowTwo.forEach(function(index) {
-                    index.classList.add("fade-in");
-                });
+                // boxRowThree.forEach(function(index) {
+                //     index.classList.add("fade-in");
+                // });
+
+                for (var i = 0; i < boxRowThree.length; i++) {
+                    boxRowThree[i].classList.add("fade-in");
+                }
             }
     
             if(scrollpos > 1333){
-                boxRowThree.forEach(function(index) {
-                    index.classList.add("fade-in");
-                });
-            }
-    
-            if(scrollpos > 1433){
-                boxRowFour.forEach(function(index) {
-                    index.classList.add("fade-in");
-                });
+                // boxRowFour.forEach(function(index) {
+                //     index.classList.add("fade-in");
+                // });
+
+                for (var i = 0; i < boxRowFour.length; i++) {
+                    boxRowFour[i].classList.add("fade-in");
+                }
             }
         });
     }

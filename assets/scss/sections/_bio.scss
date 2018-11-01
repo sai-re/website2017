@@ -10,7 +10,9 @@
 }
 
 .bio__title {
-    margin-top: $px-60;
+    @include breakpoint($bp-900) {
+        margin-top: $px-60;
+    }
 }
 
 .bio__text {

@@ -173,13 +173,11 @@ html {
   width: 100%;
   color: #f6f6f6;
   font-weight: 300;
-  background-color: #3C7A89;
   transition: background-color .1s;
   padding-bottom: 1.875rem; }
   @media screen and (min-width: 56.25rem) {
     .header {
       height: 100vh;
-      background-color: initial;
       padding-bottom: 0; } }
 
 .header__container {
@@ -239,7 +237,6 @@ html {
     .header__nav {
       margin-top: 3.75rem;
       height: auto;
-      width: auto;
       position: static;
       top: auto;
       left: auto;
@@ -371,8 +368,9 @@ html {
     opacity: 0;
     transition: all 1s ease; } }
 
-.bio__title {
-  margin-top: 3.75rem; }
+@media screen and (min-width: 56.25rem) {
+  .bio__title {
+    margin-top: 3.75rem; } }
 
 .bio__text {
   margin-top: 0.9375rem; }
@@ -423,11 +421,11 @@ html {
 
 .tech__primary-box {
   width: 5.625rem;
-  height: 5.625rem;
-  opacity: 0; }
+  height: 5.625rem; }
   @media screen and (min-width: 75rem) {
     .tech__primary-box {
-      transition: all 1s ease; } }
+      transition: all 1s ease;
+      opacity: 0; } }
 
 @media screen and (min-width: 75rem) {
   .tech__primary-item {
