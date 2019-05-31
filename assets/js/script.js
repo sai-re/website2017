@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             { colour: '#1E8BC3' }, 
             { colour: '#EC644B' }, 
             { colour: '#4DAF7C' },
-            { colour: '#95A5A6' },
             { colour: '#947CB0' }
         ];
 
