@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header-gallery" id="header-gallery">
+    <header class="header" id="header-gallery">
         <section class="section-holder header-gallery__container">
             <div class="header__mb-menu">
                 <button class="hamburger hamburger--spin" type="button" id="hamburger">
@@ -27,7 +27,7 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a class="header__nav-link" href="http://siavoush-re.co.uk">home</a></li>
+                    <li class="header__nav-item"><a class="header__nav-link" href="/">home</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="projects.html">projects</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="gallery">gallery</a></li>
                     <li class="header__nav-item"><a class="header__nav-link" href="javascript:void(0)">contact</a></li>

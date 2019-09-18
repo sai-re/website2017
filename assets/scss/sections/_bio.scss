@@ -17,9 +17,11 @@
 
 .bio__text {
     margin-top: $px-15;
+    text-align: center;
 
     @include breakpoint($bp-900) {
         width: 80%;
+        text-align: left;
     }
 
     @include breakpoint($bp-1200) {

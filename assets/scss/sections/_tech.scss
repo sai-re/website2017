@@ -1,6 +1,6 @@
 .tech {
     background-color: #ffffff;
-    padding-bottom: $px-30;
+    // padding-bottom: $px-30;
 }
 
 .tech__box {
@@ -13,17 +13,17 @@
 
 .tech__primary {
     @include flex-list();
-}
+    justify-content: space-evenly;
+    margin-top: $px-15;
 
-.tech__primary {
     @include breakpoint($bp-600) {
         width: 610px;
     }
 }
 
 .tech__primary-item {
-    margin: auto;
-    padding: 1.18rem;
+    margin-top: $px-15;
+    // padding: $px-5;
 
     @include breakpoint($bp-600) {
         margin: 0;
