@@ -1,6 +1,5 @@
 .tech {
     background-color: #ffffff;
-    // padding-bottom: $px-30;
 }
 
 .tech__box {
@@ -23,7 +22,6 @@
 
 .tech__primary-item {
     margin-top: $px-15;
-    // padding: $px-5;
 
     @include breakpoint($bp-600) {
         margin: 0;
@@ -36,44 +34,24 @@
     height: 5.625rem;
     
     @include breakpoint($bp-1200) {
-        transition: all 1s ease;
-        opacity: 0;
+        // transition: all 1s ease;
+        // opacity: 0;
     }  
 }
 
 .tech__primary-item {
     @include breakpoint($bp-1200) {
-        transition: transform 1s ease;
+        // transition: transform 1s ease;
     }
 }
 
 @include breakpoint($bp-1200) {
 
-    // .tech__primary-item:nth-child(-n + 4) {
-    //     border: 1px solid red;
-    //     // transform: translateY(150px);
-    // }
-
-    // .tech__primary-item:nth-child(n + 5):nth-child(-n + 8) {
-    //     border: 1px solid blue;
-    //     // transform: translateY(150px);
-    // }
-
-    // .tech__primary-item:nth-child(n + 9):nth-child(-n + 12) {
-    //     border: 1px solid green;
-    //     // transform: translateY(150px);
-    // }
-
-    // .tech__primary-item:nth-child(n + 13):nth-child(-n + 16) {
-    //     border: 1px solid blue;
-    //     // transform: translateY(150px);
-    // }
-
     .tech__primary-item:nth-child(-n + 4),
     .tech__primary-item:nth-child(n + 5):nth-child(-n + 8),
     .tech__primary-item:nth-child(n + 9):nth-child(-n + 12),
     .tech__primary-item:nth-child(n + 13):nth-child(-n + 16) {
-        transform: translateY(150px);
+        // transform: translateY(150px);
     }
 }
 

@@ -360,15 +360,6 @@ html {
 .gallery .gallery__img:hover {
   filter: grayscale(0%); }
 
-@media screen and (min-width: 75rem) {
-  .bio__portrait,
-  .bio__title,
-  .bio__text,
-  .bio__button {
-    transform: translateY(60px);
-    opacity: 0;
-    transition: all 1s ease; } }
-
 @media screen and (min-width: 56.25rem) {
   .bio__title {
     margin-top: 3.75rem; } }
@@ -424,21 +415,6 @@ html {
 .tech__primary-box {
   width: 5.625rem;
   height: 5.625rem; }
-  @media screen and (min-width: 75rem) {
-    .tech__primary-box {
-      transition: all 1s ease;
-      opacity: 0; } }
-
-@media screen and (min-width: 75rem) {
-  .tech__primary-item {
-    transition: transform 1s ease; } }
-
-@media screen and (min-width: 75rem) {
-  .tech__primary-item:nth-child(-n + 4),
-  .tech__primary-item:nth-child(n + 5):nth-child(-n + 8),
-  .tech__primary-item:nth-child(n + 9):nth-child(-n + 12),
-  .tech__primary-item:nth-child(n + 13):nth-child(-n + 16) {
-    transform: translateY(150px); } }
 
 .tech__primary-text {
   color: #f6f6f6;

@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header" id="header-gallery">
+    <header class="header-gallery" id="header-gallery">
         <section class="section-holder header-gallery__container">
             <div class="header__mb-menu">
                 <button class="hamburger hamburger--spin" type="button" id="hamburger">

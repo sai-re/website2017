@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             scrollpos = window.pageYOffset;
 
             if(scrollpos > 300){
-                // bioPic.classList.add("animate-in");
+                bioPic.classList.add("animate-in");
             }
 
             if(scrollpos > 350){
@@ -231,40 +231,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
             }
 
             if(scrollpos > 933){
-                // boxRowOne.forEach(function(index) {
-                //     index.classList.add("fade-in");
-                // });
-
                 for (var i = 0; i < boxRowOne.length; i++) {
                     boxRowOne[i].classList.add("fade-in");
                 }
             }
     
             if(scrollpos > 1133){
-                // boxRowTwo.forEach(function(index) {
-                //     index.classList.add("fade-in");
-                // });
-
                 for (var i = 0; i < boxRowTwo.length; i++) {
                     boxRowTwo[i].classList.add("fade-in");
                 }
             }
     
             if(scrollpos > 1233){
-                // boxRowThree.forEach(function(index) {
-                //     index.classList.add("fade-in");
-                // });
-
                 for (var i = 0; i < boxRowThree.length; i++) {
                     boxRowThree[i].classList.add("fade-in");
                 }
             }
     
             if(scrollpos > 1333){
-                // boxRowFour.forEach(function(index) {
-                //     index.classList.add("fade-in");
-                // });
-
                 for (var i = 0; i < boxRowFour.length; i++) {
                     boxRowFour[i].classList.add("fade-in");
                 }
@@ -283,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     scrollTo(backToTop, 'header-gallery');
 
     if (document.documentElement.clientWidth > 1200) {
-        animateBoxIn();
+        // animateBoxIn();
     }
     
     displaycolours();
