@@ -30,7 +30,7 @@
 
 .secondary__title {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: normal;
     color: #666;
     font-size: 1.5rem;
     line-height: 100%;
@@ -80,7 +80,7 @@
     font-size: 1.125rem;
     text-decoration: none;
     letter-spacing: 1px;
-    font-weight: 300;
+    // font-weight: 300;
     transition: all .15s ease;
 
     @include breakpoint ($bp-600) {

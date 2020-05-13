@@ -62,15 +62,15 @@
 
                 <ul class="contact__icons">
                     <li class="contact__icons-item">
-                        <a href="https://github.com/sai-re" class="contact__icons-link"><object class="contact__icons-svg" data="images/github.svg" type="image/svg+xml"></object></a>
+                        <a href="https://github.com/sai-re" class="contact__icons-link"><object class="icon contact__icons-svg" data="images/github.svg" type="image/svg+xml"></object></a>
                     </li>
 
                     <li class="contact__icons-item">
-                        <a href="mailto:contact@siavoush-re.co.uk" class="contact__icons-link"><object class="contact__icons-svg" data="images/mail.svg" type="image/svg+xml"></object></a>
+                        <a href="mailto:contact@siavoush-re.co.uk" class="contact__icons-link"><object class="icon contact__icons-svg" data="images/mail.svg" type="image/svg+xml"></object></a>
                     </li>
 
                     <li class="contact__icons-item">
-                        <a href="https://uk.linkedin.com/in/siavoush-redhai-b02377a5" class="contact__icons-link"><object class="contact__icons-svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
+                        <a href="https://uk.linkedin.com/in/siavoush-redhai-b02377a5" class="contact__icons-link"><object class="icon contact__icons-svg" data="images/linkedin.svg" type="image/svg+xml"></object></a>
                     </li>
                 </ul>
 
@@ -87,7 +87,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 
 </html>

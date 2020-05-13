@@ -115,7 +115,7 @@ html {
 
 .secondary__title {
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: normal;
   color: #666;
   font-size: 1.5rem;
   line-height: 100%;
@@ -157,7 +157,6 @@ html {
   font-size: 1.125rem;
   text-decoration: none;
   letter-spacing: 1px;
-  font-weight: 300;
   transition: all .15s ease; }
   @media screen and (min-width: 37.5rem) {
     .btn__text {
@@ -172,7 +171,6 @@ html {
 .header {
   width: 100%;
   color: #f6f6f6;
-  font-weight: 300;
   transition: background-color .1s;
   padding-bottom: 1.875rem; }
   @media screen and (min-width: 56.25rem) {
@@ -192,7 +190,6 @@ html {
     width: 100%;
     height: 100%;
     content: '';
-    background-color: #3C7A89;
     transition: background-color .1s;
     transform: skewY(-20deg); } }
 
@@ -200,7 +197,6 @@ html {
   width: 100%;
   color: #f6f6f6;
   font-weight: 300;
-  background-color: #3C7A89;
   transition: background-color .1s;
   padding-bottom: 1.875rem; }
   @media screen and (min-width: 56.25rem) {
@@ -294,9 +290,6 @@ html {
 
 .header__hero-img {
   width: 8rem; }
-  @media screen and (min-width: 56.25rem) {
-    .header__hero-img {
-      width: 10.69rem; } }
 
 .header__title,
 .header__secondary-title {
@@ -312,7 +305,7 @@ html {
   font-size: 0.75em; }
   @media screen and (min-width: 56.25rem) {
     .header__secondary-title {
-      font-size: 1.5rem; } }
+      font-size: 2rem; } }
 
 .header__scroll {
   margin-top: 1.875rem;
@@ -383,7 +376,6 @@ html {
   margin-top: 3.75rem; }
 
 .bio__button-text {
-  background-color: #3C7A89;
   color: #f6f6f6; }
 
 .tech {
@@ -393,7 +385,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3C7A89;
   transition: background-color .1s; }
 
 .tech__primary {
@@ -403,7 +394,7 @@ html {
   margin-top: 0.9375rem; }
   @media screen and (min-width: 37.5rem) {
     .tech__primary {
-      width: 610px; } }
+      width: 750px; } }
 
 .tech__primary-item {
   margin-top: 0.9375rem; }
@@ -419,7 +410,6 @@ html {
 .tech__primary-text {
   color: #f6f6f6;
   font-size: 1.125rem;
-  font-weight: 300;
   letter-spacing: 1px;
   text-align: center; }
 
