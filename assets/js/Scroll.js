@@ -12,7 +12,7 @@ const Scroll = {
         s = this.variables;
 
         //call all functions
-        this.scrollTo(s.navLinks[3], 'contact');
+        this.scrollTo(s.navLinks[1], 'contact');
         
         if (s.arrowDown) this.scrollTo(s.arrowDown, 'bio');
 
